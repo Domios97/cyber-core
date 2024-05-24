@@ -1,0 +1,82 @@
+a {
+    text-decoration: none;
+    color: #22262A;
+}
+nav{
+    height: 80px;
+    width: auto;
+    top: 0;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+.site-logo img {
+    width: 50px;
+    height: 40px;
+}
+.shop-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #283446;
+    border-radius: 45px;
+    padding: 0px 10px;
+}
+.shop-button img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+.search-bar {
+    position: relative;
+    display: inline-block;
+    margin-left: 200px;
+}
+.search-bar input{
+    width: 300px;
+    height: 45px;
+    border: 1px solid #283446;
+    border-radius: 45px;
+    padding: 0px 10px;
+}
+.search-bar button{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+.search-button img{
+    width: 20px;
+    height: auto;
+}
+.right-nav {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+.right-nav img {
+    width: 20px;
+    height: 20px;   
+}
+.about-contact {
+    margin-left: 50px;
+}
+.about-contact li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
