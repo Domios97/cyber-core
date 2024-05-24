@@ -1,6 +1,6 @@
 import React from "react";
 import '../CSS/navigbar.css';
-import {shop, favori, loupe, panier, account, sitelogo } from "../images";
+import {shop, favori, loupe, panier, account, sitelogo,home } from "../images";
 
 const Navbar = ()=>{
     return (
@@ -8,11 +8,10 @@ const Navbar = ()=>{
         <div className="site-logo">
             <img src={sitelogo} alt="" />
         </div>
-        <div className="shop-button">
-                <p>Store</p>
+        <div className="home-shop">
+            <img src={home} alt="" />
                 <img src={shop} alt="the shop"/>
         </div>
-        
         <div className="search-bar">
             <input type="search" placeholder="Laptops, Desktops, Accessories ...Etc "/>
             <button type="submit" class="search-button">
