@@ -11,80 +11,42 @@
 a {
     text-decoration: none;
 }
-
-.site-footer {
-    position: static;
-    bottom: 0;
-    display: block;
-}
-
-.upper-footer {
-    padding-top: 40px;
-    padding-left: 30px;
-    padding-right: 50px;
-    width: 100%;
+.catgorie-carousel {
     display: flex;
-    height: 300px;
-    background-color: white;
-    align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 300px;
+    padding: 10px 70px;
 }
 
-.footer-sections {
-    height: 100%;
-    width: 300px;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-.footer-sections li,
-p {
-    font-size: 16px;
-    font-weight: 400;
-    list-style-type: none;
-    margin: 10px 0px;
-}
-
-.download-icons {
+.one-categorie {
+    width: 200px;
+    height: 250px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid rgb(224, 221, 221);
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.one-categorie:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.one-categorie img {
     width: 100%;
     height: auto;
 }
 
-.download-buttons {
-    border: none;
-    background-color: white;
-}
-
-.download-icons img {
-    width: 100%;
-}
-
-.bottom-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    background-color: #F5F5F5;
-    padding-left: 45px;
-    padding-right: 30px;
-}
-
-.payment-methods {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-#cash {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
-
-#dahabia {
-    width: 40px;
-    height: 30px;
-    margin-left: 10px;
+.one-categorie p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }

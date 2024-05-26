@@ -7,6 +7,7 @@ const Navbar = ()=>{
         <nav>
         <div className="site-logo">
             <img src={sitelogo} alt="" />
+            <span>CyberCore</span>
         </div>
         <div className="home-shop">
             <img src={home} alt="" />
