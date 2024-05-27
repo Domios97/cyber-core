@@ -1,0 +1,71 @@
+/* Products.css */
+
+/* Ensure the container flex layout */
+.products-container {
+  width: auto;
+  height: auto;
+  overflow-y: auto;
+  position: relative;
+  padding-left: 8px;
+}
+
+
+/* Product list grid */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  top: 0; /* Align the product cards to the top of the container */
+  left: 0; /* Align the product cards to the left of the container */
+  width: 100%;
+  z-index: 1;
+}
+
+/* Product card styling */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  width: 200px;
+  position: relative;
+  z-index: 1;
+  
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: scale(1.05);
+  /* Add a subtle shadow or border on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  height: auto;
+  /* Ensure images maintain aspect ratio */
+  object-fit: cover;
+}
+
+/* Product details */
+.product-details {
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Price styling */
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+/* Hide radio buttons (for star rating) */
+input[type="radio"] {
+  display: none;
+}
