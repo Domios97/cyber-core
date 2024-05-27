@@ -14,6 +14,6 @@ const CategoryFilter = ({ categories = [], onSelectCategory }) => {
       </ul>
     </div>
   );
-};
+}
 
 export default CategoryFilter;
