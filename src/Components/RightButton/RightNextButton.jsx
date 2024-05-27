@@ -1,6 +1,6 @@
 import React from 'react';
 import '../CSS/RightNextButton.css';
-import { rightArrow } from '../images';
+import { rightArrow } from '../../images';
 
 function RightNextButton() {
   return (

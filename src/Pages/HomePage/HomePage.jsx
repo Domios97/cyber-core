@@ -1,13 +1,13 @@
 import React from 'react';
-import { wallpaper } from '../images';
+import { wallpaper } from '../../images';
 import '../CSS/HomePage.css';
 import '../CSS/CategorieCarousel.css';
-import CatgorieCarousel from '../Components/CategorieCarousel';
-import Promotion from '../Components/Promotion';
-import BrandingCarousel from '../Components/BrandingCarousel';
-import ProductCart from '../Components/ProductCart';
-import RightNextButton from '../Components/RightNextButton'
-import LeftNextButton from '../Components/LeftNextButton';
+import CatgorieCarousel from '../../Components/CategoryCarousel/CategorieCarousel';
+import Promotion from '../../Components/OnePromotion/Promotion';
+import BrandingCarousel from '../../Components/BrandingsCarousel/BrandingCarousel';
+import ProductCart from '../../Components/OneProduct/ProductCart';
+import RightNextButton from '../../Components/RightButton/RightNextButton'
+import LeftNextButton from '../../Components/LeftButton/LeftNextButton';
 
 
 function HomePage() {
@@ -33,15 +33,15 @@ function HomePage() {
       </div>
       <div className="latest-prodcuts">
         <h3>Latest Products</h3>
-       <div className="latest-products-carousel">
-        <LeftNextButton />
-        <ProductCart /> 
-        <ProductCart /> 
-        <ProductCart /> 
-        <ProductCart /> 
-        <ProductCart /> 
-        <RightNextButton />
-       </div>
+        <div className="latest-products-carousel">
+          <LeftNextButton />
+          <ProductCart />
+          <ProductCart />
+          <ProductCart />
+          <ProductCart />
+          <ProductCart />
+          <RightNextButton />
+        </div>
       </div>
     </div>
   )

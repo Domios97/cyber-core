@@ -1,15 +1,15 @@
 import React from 'react';
 import '../CSS/Category.css';
-import {desktop} from '../images';
+import { desktop } from '../../images';
 
 
 function Category() {
   return (
     <div>
       <div className="one-categorie">
-            <img src={desktop} alt="" />
-            <p>PCs/Desktops</p>
-        </div>
+        <img src={desktop} alt="" />
+        <p>PCs/Desktops</p>
+      </div>
     </div>
   )
 }
