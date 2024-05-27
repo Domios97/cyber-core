@@ -26,8 +26,12 @@ import promo from './promo.png';
 import promoGPU from './promoGPU.jpeg';
 import acer from './acer.png';
 import msi from './msi.png';
-import gigabyte from './gigabyte.png'
+import gigabyte from './gigabyte.png';
+import rightArrow from './rightArrow.png';
+import LeftArrow from './LeftArrow.png'
 export {
+  rightArrow,
+  LeftArrow,
   loupe,
   panier,
   favori,

@@ -6,6 +6,8 @@ import CatgorieCarousel from '../Components/CategorieCarousel';
 import Promotion from '../Components/Promotion';
 import BrandingCarousel from '../Components/BrandingCarousel';
 import ProductCart from '../Components/ProductCart';
+import RightNextButton from '../Components/RightNextButton'
+import LeftNextButton from '../Components/LeftNextButton';
 
 
 function HomePage() {
@@ -32,11 +34,13 @@ function HomePage() {
       <div className="latest-prodcuts">
         <h3>Latest Products</h3>
        <div className="latest-products-carousel">
+        <LeftNextButton />
         <ProductCart /> 
         <ProductCart /> 
         <ProductCart /> 
         <ProductCart /> 
         <ProductCart /> 
+        <RightNextButton />
        </div>
       </div>
     </div>
