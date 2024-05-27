@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Products, { products as productData } from './products';
-import CategoryFilter from './CategoryFilter';
-import FilterSort from './FilterSort';
-import SearchBar from './SearchBar';
-import ProductDetails from './ProductDetails';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-const categories = {
-  'All': [],
-  'Electronics': ['Gaming', 'Wearable'],
-  'Phones': ['Android', 'iPhone'],
-  'Tablets': ['iPad', 'Android Tablet']
-};
+import Navbar from './Components/Navigbar';
+import SiteFooter from './Components/sitefooter';
+import HomePage from './Pages/HomePage';
 
 function App() {
   const [filteredProducts, setFilteredProducts] = useState(productData);
@@ -83,6 +73,11 @@ function App() {
               <SearchBar onSearch={handleSearch} />
               <FilterSort onFilterSort={handleFilterSort} />
             </div>
+            <div>
+      <Navbar />
+      <HomePage />
+      <SiteFooter />
+    </div>
             <Routes>
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/" element={<Products products={filteredProducts} />} />
@@ -91,7 +86,9 @@ function App() {
         </div>
       </div>
     </Router>
+
+
   );
-}
+};
 
 export default App;
