@@ -1,11 +1,16 @@
 import './App.css';
 import Navbar from './Components/Navigbar';
+import SiteFooter from './Components/sitefooter';
+import HomePage from './Pages/HomePage';
 
-const App=()=> {
+const App = () => {
   return (
     <div>
-       <Navbar/>
+      <Navbar />
+      <HomePage />
+      <SiteFooter />
     </div>
+
   );
 };
 
