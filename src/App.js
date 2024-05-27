@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import './App.css';
 import Products, { products as productData } from './products';
-import HeroSection from './HeroSection';
 import CategoryFilter from './CategoryFilter';
 import FilterSort from './FilterSort';
 import SearchBar from './SearchBar';
 import ProductDetails from './ProductDetails';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Route and Switch
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-const categories = ['All', 'Electronics', 'Phones', 'Tablets'];
+const categories = {
+  'All': [],
+  'Electronics': ['Gaming', 'Wearable'],
+  'Phones': ['Android', 'iPhone'],
+  'Tablets': ['iPad', 'Android Tablet']
+};
 
 function App() {
   const [filteredProducts, setFilteredProducts] = useState(productData);
@@ -51,9 +55,12 @@ function App() {
     setFilteredProducts(filtered);
   };
 
-  const handleSelectCategory = (category) => {
+  const handleSelectCategory = (category, subcategory = null) => {
     if (category === 'All') {
       setFilteredProducts(productData);
+    } else if (subcategory) {
+      const filtered = productData.filter(product => product.category === category && product.subcategory === subcategory);
+      setFilteredProducts(filtered);
     } else {
       const filtered = productData.filter(product => product.category === category);
       setFilteredProducts(filtered);
@@ -67,23 +74,22 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
-      <h1>Product Display</h1>
-      <div className="main-content">
-        <CategoryFilter categories={categories} onSelectCategory={handleSelectCategory} />
-        <div className="content-section">
-          <HeroSection />
-          <SearchBar onSearch={handleSearch} />
-          
-          <FilterSort onFilterSort={handleFilterSort} />
-          <Products products={filteredProducts} />
-          <Routes>
-              <Route path="/product/:id" component={ProductDetails} />
-              <Route path="/" component={() => <Products products={filteredProducts} />} />
+      <div className="App">
+        <h1>Product Display</h1>
+        <div className="main-content">
+          <CategoryFilter categories={categories} onSelectCategory={handleSelectCategory} />
+          <div className="content-section">
+            <div className="search-filter-section">
+              <SearchBar onSearch={handleSearch} />
+              <FilterSort onFilterSort={handleFilterSort} />
+            </div>
+            <Routes>
+              <Route path="/product/:id" element={<ProductDetails />} />
+              <Route path="/" element={<Products products={filteredProducts} />} />
             </Routes>
+          </div>
         </div>
       </div>
-    </div>
     </Router>
   );
 }

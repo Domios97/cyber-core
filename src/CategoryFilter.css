@@ -1,23 +1,70 @@
 /* CategoryFilter.css */
 .category-filter {
-  text-align: left;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-right: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: flex;
+  top: 20px;
+  left: 2px;
+  width: 200px;
+  height: 250px; /* Set a fixed height */
 }
 
 .category-filter h2 {
-  font-size: 1.5em;
-  margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #9e1dda;
+  width: 200% ;
 }
 
-.category-filter ul {
-  list-style-type: none;
+.category-list {
+  list-style: none;
   padding: 0;
 }
 
-.category-filter li {
-  margin: 10px 0;
-  cursor: pointer;
+.category-item {
+  margin-bottom: 10px;
 }
 
-.category-filter li:hover {
-  text-decoration: underline;
+.category-item a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-item a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.subcategories {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+  display: none;
+}
+
+.subcategories .subcategory-item a {
+  font-size: 14px;
+  color: #666;
+}
+
+.subcategories .subcategory-item a:hover {
+  color: #000;
+  
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.category-item.open .subcategories {
+  display: block;
 }
