@@ -2,9 +2,10 @@ import React from 'react';
 import { wallpaper } from '../images';
 import '../CSS/HomePage.css';
 import '../CSS/CategorieCarousel.css';
-import CatgorieCarousel from './CategorieCarousel';
-import { amd, nvidia, hp, asus, apple, intel } from '../images';
-import Promotion from './Promotion';
+import CatgorieCarousel from '../Components/CategorieCarousel';
+import Promotion from '../Components/Promotion';
+import BrandingCarousel from '../Components/BrandingCarousel';
+import ProductCart from '../Components/ProductCart';
 
 
 function HomePage() {
@@ -16,14 +17,7 @@ function HomePage() {
       </div>
       <div className="brandings-section">
         <h2>We Deal Only With The Best Brands </h2>
-        <div className="brandigs-carousel">
-          <img src={nvidia} alt="" />
-          <img src={asus} alt="" />
-          <img src={apple} alt="" />
-          <img src={intel} alt="" />
-          <img src={amd} alt="" />
-          <img src={hp} alt="" />
-        </div>
+        <BrandingCarousel />
       </div>
       <div className="categories">
         <h3>Top Categories</h3>
@@ -36,7 +30,14 @@ function HomePage() {
         </div>
       </div>
       <div className="latest-prodcuts">
-        
+        <h3>Latest Products</h3>
+       <div className="latest-products-carousel">
+        <ProductCart /> 
+        <ProductCart /> 
+        <ProductCart /> 
+        <ProductCart /> 
+        <ProductCart /> 
+       </div>
       </div>
     </div>
   )

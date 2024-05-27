@@ -24,6 +24,9 @@ import hp from './hp.jpeg';
 import intel from './intel.png';
 import promo from './promo.png';
 import promoGPU from './promoGPU.jpeg';
+import acer from './acer.png';
+import msi from './msi.png';
+import gigabyte from './gigabyte.png'
 export {
   loupe,
   panier,
@@ -50,5 +53,8 @@ export {
   nvidia,
   intel,
   promo,
-  promoGPU
+  promoGPU,
+  acer,
+  msi,
+  gigabyte
 };

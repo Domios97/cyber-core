@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './Components/Navigbar';
 import SiteFooter from './Components/sitefooter';
-import HomePage from './Components/homePage';
+import HomePage from './Pages/HomePage';
 
 const App = () => {
   return (

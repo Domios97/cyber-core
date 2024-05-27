@@ -2,35 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-.add-to-cart {
-    background: #6d77f6;
-    border: 1px solid #6d77f6;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-   
-    color: #FFFFFF;
+* {
+    font-family: 'Poppins' , sans-serif ;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.one-categorie {
+    width: 180px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid rgb(224, 221, 221);
+    border-radius: 3px;
+    background-color: white;
     cursor: pointer;
-    display: inline-block;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.one-categorie:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.one-categorie img {
+    width: 100%;
+    height: auto;
+}
+
+.one-categorie p {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 10px;
-    min-height: 40px;
-    padding: 5px;
-    text-align: center;
-    position: absolute;
-    bottom: 5%;
-    left: 30%;
-}
-
-.add-to-cart:hover {
-  background-color: #9c43f8;
-  transform: translateY(-2px);
-}
-
-@media (min-width: 100px) {
-    .add-to-cart {
-    padding: 16px 44px;
-    min-width: 150px;
-  }
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
