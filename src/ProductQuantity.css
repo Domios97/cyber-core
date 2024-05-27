@@ -1,0 +1,48 @@
+.quantity-container {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .quantity-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .quantity-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .increment {
+    background-color: green;
+  }
+  
+  .increment:hover {
+    background-color: darkgreen;
+  }
+  
+  .decrement {
+    background-color: red;
+  }
+  
+  .decrement:hover {
+    background-color: darkred;
+  }
+  
+  .quantity-display {
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+  }
+  
