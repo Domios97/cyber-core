@@ -1,5 +1,5 @@
 import React from 'react';
-import './Products.css';
+import '../CSS/Products.css';
 const products = [
   { id: 1, image: '/images/Controller.jpg', title: 'test1', price: 55, category: 'Electronics',rating: 4 },
   { id: 2, image: '/images/image3.jpg', title: 'test2', price: 79, category: 'Phones', rating:3 },

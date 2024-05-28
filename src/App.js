@@ -1,8 +1,33 @@
 import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navigbar';
 import SiteFooter from './Components/sitefooter';
 import HomePage from './Pages/HomePage';
+import Products, { products as productData } from './Components/products';
+import CategoryFilter from './Components/CategoryFilter';
+import FilterSort from './Components/FilterSort';
+import SearchBar from './Components/SearchBar';
+import ProductDetails from './Components/ProductDetails';
+
+const categories = [
+  {
+    name: 'All',
+    subcategories: []
+  },
+  {
+    name: 'Electronics',
+    subcategories: ['Gaming', 'Wearable']
+  },
+  {
+    name: 'Phones',
+    subcategories: ['Android', 'iPhone']
+  },
+  {
+    name: 'Tablets',
+    subcategories: ['iPad', 'Android Tablet']
+  }
+];
 
 function App() {
   const [filteredProducts, setFilteredProducts] = useState(productData);
@@ -65,7 +90,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Product Display</h1>
         <div className="main-content">
           <CategoryFilter categories={categories} onSelectCategory={handleSelectCategory} />
           <div className="content-section">
@@ -73,22 +97,16 @@ function App() {
               <SearchBar onSearch={handleSearch} />
               <FilterSort onFilterSort={handleFilterSort} />
             </div>
-            <div>
-      <Navbar />
-      <HomePage />
-      <SiteFooter />
-    </div>
             <Routes>
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/" element={<Products products={filteredProducts} />} />
             </Routes>
           </div>
         </div>
+        <SiteFooter />
       </div>
     </Router>
-
-
   );
-};
+}
 
 export default App;

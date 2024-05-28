@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FilterSort.css';
+import '../CSS/FilterSort.css';
 
 const FilterSort = ({ onFilterSort }) => {
   const [priceRange, setPriceRange] = useState('');

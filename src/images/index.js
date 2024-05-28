@@ -1,9 +1,4 @@
-import loupe from './loupe.png';
-import panier from './panier.png';
-import favori from './favori.png';
-import account from './account.png';
-import sitelogo from './sitelogo.png';
-import shop from './shop.png';
+
 import appstore from './appstore.png';
 import googleplay from './googleplay.png';
 import cash from './cash.png';
@@ -32,12 +27,6 @@ import LeftArrow from './LeftArrow.png'
 export {
   rightArrow,
   LeftArrow,
-  loupe,
-  panier,
-  favori,
-  account,
-  sitelogo,
-  shop,
   appstore,
   googleplay,
   cartedahabia,

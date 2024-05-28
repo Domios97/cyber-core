@@ -6,17 +6,14 @@ const Navbar = () => {
     return (
         <nav>
             <div className="site-logo">
-                <img src={sitelogo} alt="" />
                 <span>CyberCore</span>
             </div>
             <div className="home-shop">
-                <img src={home} alt="" />
-                <img src={shop} alt="the shop" />
+           
             </div>
             <div className="search-bar">
                 <input type="search" placeholder="Laptops, Desktops, Accessories ...Etc " />
                 <button type="submit" class="search-button">
-                    <img src={loupe} alt="" />
                 </button>
             </div>
             <div className="about-contact">
@@ -26,9 +23,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="right-nav">
-                <img src={favori} alt="" />
-                <img src={panier} alt="" />
-                <img src={account} alt="" />
+           
             </div>
         </nav>
     )
