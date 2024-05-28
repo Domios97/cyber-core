@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Category.css';
+import './Category.css';
 import { desktop } from '../../images';
 
 

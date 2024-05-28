@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/CategorieCarousel.css'
+import './CategorieCarousel.css'
 import Category from '../OneCategory/Category';
 
 function CatgorieCarousel() {

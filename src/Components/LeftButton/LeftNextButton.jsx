@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/LeftNextButton.css';
+import './LeftNextButton.css';
 import { LeftArrow } from '../../images';
 
 function LeftNextButton() {

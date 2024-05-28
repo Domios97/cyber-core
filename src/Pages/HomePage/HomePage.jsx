@@ -1,21 +1,23 @@
 import React from 'react';
 import { wallpaper } from '../../images';
-import '../CSS/HomePage.css';
-import '../CSS/CategorieCarousel.css';
+import './HomePage.css';
 import CatgorieCarousel from '../../Components/CategoryCarousel/CategorieCarousel';
 import Promotion from '../../Components/OnePromotion/Promotion';
 import BrandingCarousel from '../../Components/BrandingsCarousel/BrandingCarousel';
 import ProductCart from '../../Components/OneProduct/ProductCart';
 import RightNextButton from '../../Components/RightButton/RightNextButton'
 import LeftNextButton from '../../Components/LeftButton/LeftNextButton';
+import HeroSection from '../../Components/HeroSection/HeroSection';
+import ShopNowButton from '../../Components/ShopNowButton/ShopNowButton'
 
 
 function HomePage() {
+  
   return (
     <div>
       <div className="hero-section">
         <h1>Discver The Latest Hardware Computing Products !</h1>
-        <button type='' onClick='' class="shopnow-button" role="button">Shop Now </button>
+        <ShopNowButton />
       </div>
       <div className="brandings-section">
         <h2>We Deal Only With The Best Brands </h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Promotion.css';
+import './Promotion.css';
 import PromoBadge from '../PromoBadge/PromoBadge';
 import { promoGPU } from '../../images';
 import AddCartButt from '../AddToCartButton/AddCartButt';

@@ -1,0 +1,39 @@
+.filter-sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-sort .filter-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-sort .filter-item label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .filter-sort .filter-item input,
+  .filter-sort .filter-item select {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .filter-sort button {
+    padding: 9px 19px;
+    background-color: #7c4caf;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 0px;
+    border-radius: 5%;
+  }
+  
+  .filter-sort button:hover {
+    background-color: #d5d8d5;
+  }

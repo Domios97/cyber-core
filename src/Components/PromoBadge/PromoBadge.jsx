@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/PromoBadge.css'
+import './PromoBadge.css'
 import { promo } from '../../images';
 
 function PromoBadge() {

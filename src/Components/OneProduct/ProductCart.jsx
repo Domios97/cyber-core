@@ -1,6 +1,6 @@
 import React from 'react';
 import AddCartButt from '../AddToCartButton/AddCartButt';
-import '../CSS/ProductCart.css';
+import './ProductCart.css';
 import { router, headset } from '../../images';
 
 function ProductCart() {

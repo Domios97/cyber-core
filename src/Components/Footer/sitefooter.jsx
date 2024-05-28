@@ -1,5 +1,5 @@
 import React from "react";
-import '../CSS/sitefooter.css';
+import './sitefooter.css';
 import { googleplay, appstore, cartedahabia, cash } from "../../images";
 
 const SiteFooter = () => {
