@@ -1,5 +1,5 @@
 import React from "react";
-import './navigbar.css';
+import '../NavBar/navigbar.css';
 import { shop, favori, loupe, panier, account, sitelogo, home } from "../../images";
 
 const Navbar = () => {
