@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/AddCartButt.css';
+import './AddCartButt.css';
 
 const AddCartButt = ({style}) => {
   return (

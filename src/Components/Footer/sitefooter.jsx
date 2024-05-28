@@ -1,6 +1,6 @@
 import React from "react";
-import '../CSS/sitefooter.css';
-import { googleplay, appstore, cartedahabia, cash } from "../images";
+import './sitefooter.css';
+import { googleplay, appstore, cartedahabia, cash } from "../../images";
 
 const SiteFooter = () => {
     return (

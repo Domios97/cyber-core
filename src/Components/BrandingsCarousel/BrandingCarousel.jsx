@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import '../CSS/BrandingCarousel.css';
-import { amd, nvidia, hp, asus, apple, intel, msi, gigabyte } from '../images';
+import './BrandingCarousel.css';
+import { amd, nvidia, hp, asus, apple, intel, msi, gigabyte } from '../../images';
 
 function BrandingCarousel() {
   useEffect(() => {
     const images = document.querySelectorAll('.brandigs-carousel img');
     const container = document.querySelector('.brandigs-carousel');
-    let animationDuration = 20; 
+    let animationDuration = 20;
 
     let totalWidth = 0;
     images.forEach(image => {

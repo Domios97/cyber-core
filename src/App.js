@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navigbar';
 import SiteFooter from './Components/sitefooter';
-import HomePage from './Pages/HomePage';
 import Products, { products as productData } from './Components/products';
 import CategoryFilter from './Components/CategoryFilter';
 import FilterSort from './Components/FilterSort';
 import SearchBar from './Components/SearchBar';
 import ProductDetails from './Components/ProductDetails';
+import Navbar from './Components/NavBar/Navigbar';
+import SiteFooter from './Components/Footer/sitefooter';
+import HomePage from './Pages/HomePage/HomePage';
 
 const categories = [
   {
@@ -86,6 +87,7 @@ function App() {
     setSearchQuery(query);
     handleFilterSort({ priceRange: '', rating: '', sortOption: '' });
   };
+
 
   return (
     <Router>
