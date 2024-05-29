@@ -28,7 +28,8 @@ import acer from './acer.png';
 import msi from './msi.png';
 import gigabyte from './gigabyte.png';
 import rightArrow from './rightArrow.png';
-import LeftArrow from './LeftArrow.png'
+import LeftArrow from './LeftArrow.png';
+import wallpaper1 from './wallpaper1.jpeg';
 export {
   rightArrow,
   LeftArrow,
@@ -60,5 +61,6 @@ export {
   promoGPU,
   acer,
   msi,
-  gigabyte
+  gigabyte,
+  wallpaper1
 };

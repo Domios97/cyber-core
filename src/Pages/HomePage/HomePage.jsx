@@ -1,5 +1,5 @@
 import React from 'react';
-import { wallpaper } from '../../images';
+import { wallpaper, wallpaper1 } from '../../images';
 import './HomePage.css';
 import CatgorieCarousel from '../../Components/CategoryCarousel/CategorieCarousel';
 import Promotion from '../../Components/OnePromotion/Promotion';
@@ -45,6 +45,26 @@ function HomePage() {
           <RightNextButton />
         </div>
       </div>
+      <div className="second-hero-section">
+        <h2>Unlock Your Potential with Our Innovative Solutions</h2>
+        <ShopNowButton />
+      </div>
+      <div className="best-sales">
+          <h3>Best Sales</h3>
+          <div className="best-sales-carousel">
+            <LeftNextButton />
+            <ProductCart />
+            <ProductCart />
+            <ProductCart />
+            <ProductCart />
+            <ProductCart />
+            <RightNextButton />
+          </div>
+      </div>
+      <div className="bottom-promotion">
+        <Promotion className="buttom-promo"></Promotion>
+      </div>
+
     </div>
   )
 }

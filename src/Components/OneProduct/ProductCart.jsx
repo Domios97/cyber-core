@@ -14,7 +14,9 @@ function ProductCart() {
   };
   return (
     <div>
-      <div className="product-cart">
+      <div className="product-cart" onClick={() => {
+        console.log("clicked");
+      }}>
         <img src={headset} alt="" />
         <p>Router</p>
         <p id='price'>234 700 DZD</p>
