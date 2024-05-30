@@ -9,7 +9,10 @@ import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
 function App() {
  
 
+
+
   return (
+
     <Router>
       <div className="App">
         <Navbar/>
@@ -23,4 +26,6 @@ function App() {
   );
 }
 
+
 export default App;
+
