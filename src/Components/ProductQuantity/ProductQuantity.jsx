@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './ProductQuantity.css';
 
-const ProductQuantity = () => {
+function ProductQuantity(){
   const [quantity, setQuantity] = useState(1);
 
-  const handleIncrement = () => {
+  const handleIncrement = ({style}) => {
     setQuantity(prevQuantity => prevQuantity + 1);
   };
 
@@ -13,7 +13,7 @@ const ProductQuantity = () => {
   };
 
   return (
-    <div className="quantity-container">
+    <div className="quantity-container custom">
       <button
         className="quantity-button decrement"
         onClick={handleDecrement}

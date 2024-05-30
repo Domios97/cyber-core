@@ -1,10 +1,10 @@
 import React from 'react';
 import './AddCartButt.css';
 
-const AddCartButt = ({style}) => {
+const AddCartButt = ({addCartStyle, relatedProductsButt}) => {
   return (
     <div>
-      <button type='submit' className='add-to-cart' style={style}>Add To Cart</button>
+      <button type='submit' className={`add-to-cart ${addCartStyle} ${relatedProductsButt}`}>Add To Cart</button>
     </div>
   )
 }

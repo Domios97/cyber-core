@@ -34,3 +34,18 @@
     min-width: 150px;
   }
 }
+
+.add-to-cart.custom-button{
+  margin-top: 10px;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  width: 270px;
+}
+.add-to-cart.latest-products {
+  position: relative;
+  width: 180px;
+  left: 0%;
+  height: 40px;
+  text-wrap: nowrap;
+}

@@ -32,3 +32,9 @@ a {
     left: 50%;
 }
 
+.one-promo.styled-promo {
+    width: 700px;
+    height: 400px;
+    margin: 0px 40px;
+}
+

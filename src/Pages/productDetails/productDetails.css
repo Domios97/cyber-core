@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.product-details-container{
+    height: 450px;
+    width: 70%;
+    margin: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-radius: 4px;
+}
+
+.product-details-container p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+.product-details-image{
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.product-details-image > img {
+    height: 100%;
+}
+.product-details-image div:first-child{
+   position: absolute;
+   top: 0;
+   width: 100px;
+   height: 100px;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   gap: 10px;
+}
+.product-details-image div:first-child img{
+  margin-top: 10px;  
+  height: 100;
+  border: 1px solid #7f7f7f;
+  border-radius: 4px;
+  box-shadow: 0px 1px 15px 1px #7f7f7f;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.product-details-image div:first-child img:hover {
+    transform: scale(1.1);
+  }
+.product-details-info{
+    padding-top: 20px;
+    width: 30%;
+    height: auto;
+    align-items: start;
+}
+.product-details-info h3{
+    margin-bottom: 10px;
+}
+.product-details-info p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.product-details-info > form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product-details-info > form div:first-child{
+    display: flex;
+    gap:15px;
+    align-items: center;
+}
+
+.product-quantity {
+    display: flex;
+    width: 185px;
+    border-radius: 3px;
+    padding: 2px 3px;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    height: 150px;
+    text-wrap: wrap;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #F5F5F5;
+}
+hr {
+    height: 2px;
+    color:  #f2f2f2;
+    width: 100%;
+    margin: auto;
+}
+#description-p {
+    font-size: 18px;
+    font-weight: 550;
+    color: #6d77f6;
+}
+.related-product-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+}
+
+.related-product-section h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.related-products-carousel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+}
+
+input {
+    position: relative;
+    top: 10%;
+    width: 15px;
+    height: 15px;
+}
