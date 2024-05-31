@@ -30,6 +30,7 @@ import gigabyte from './gigabyte.png';
 import rightArrow from './rightArrow.png';
 import LeftArrow from './LeftArrow.png';
 import wallpaper1 from './wallpaper1.jpeg';
+import ViewAllArrow from './ViewAllArrow.png'
 export {
   rightArrow,
   LeftArrow,
@@ -62,5 +63,6 @@ export {
   acer,
   msi,
   gigabyte,
-  wallpaper1
+  wallpaper1, 
+  ViewAllArrow
 };

@@ -9,7 +9,8 @@ const App = () => {
     return ( 
      <>
         <Navbar />
-        <ProductDetails />
+        <HomePage />
+        <SiteFooter />
      </>
     );
 };

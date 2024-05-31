@@ -7,22 +7,24 @@
 }
 a {
     text-decoration: none;
-    color: #22262A;
+    color: #252525;
 }
 nav{
-    height: 80px;
+    height: 75px;
     width: 100%;
     top: 0;
-    background-color: #F5F5F5;
+    background-color: #FDFFFC;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
+    border-bottom: 1px solid #d9d9d9;
 }
 .site-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 .site-logo img {
     width: 50px;
@@ -33,8 +35,9 @@ nav{
     font-size: 14px;
     font-weight: 600;
 }
-.home-shop {
+.home-shop-group {
     display: flex;
+    margin-left: 20px;
     align-items: center;
     justify-content: space-between;
     width: 80px;
@@ -42,8 +45,9 @@ nav{
 }
 .home-shop img {
     width: 20px;
-    height: auto;
+    height: 20px;
     cursor: pointer;
+    position: relative;
 }
 .search-bar {
     position: relative;
@@ -53,9 +57,13 @@ nav{
 .search-bar input{
     width: 400px;
     height: 50px;
-    border: 1px solid #283446;
+    border: 1px solid #C0C0C0;
     border-radius: 45px;
-    padding: 5px 10px;
+    padding: 5px 13px;
+    outline: none;
+}
+.search-input:focus {
+    border: 1px solid #6d77f6;
 }
 .search-bar button{
     position: absolute;
@@ -72,15 +80,17 @@ nav{
 }
 .right-nav {
     display: flex;
-    width: 100px;
+    width: 120px;
     justify-content: space-between;
 }
 .right-nav img {
     cursor: pointer;
     width: 20px;
     height: 20px;   
+    position: relative;
 }
 .about-contact {
+    margin-top: 10px;
     margin-left: 50px;
 }
 .about-contact li{
@@ -90,4 +100,64 @@ nav{
     margin-right: 20px;
     font-size: 16px;
     font-weight: 550;
+}
+.about-contact li a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.about-contact li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color: #6d77f6; 
+    transition: width 0.3s ease-in-out;
+}
+
+.about-contact li a:hover::after {
+    width: 100%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    height: 28px;
+    background-color: #252525;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 1px 2px;
+    position: absolute;
+    z-index: 1;
+    bottom: -90%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #252525 transparent transparent transparent;
 }

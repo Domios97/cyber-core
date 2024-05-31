@@ -4,13 +4,12 @@ import PromoBadge from '../PromoBadge/PromoBadge';
 import { promoGPU } from '../../images';
 import AddCartButt from '../AddToCartButton/AddCartButt';
 
-const Promotion =({style})=> {
+function Promotion({styledPromo}) {
   return (
     <div>
-      <div className="one-promo">
+      <div className={`one-promo ${styledPromo}`}>
         <PromoBadge />
         <img src={promoGPU} alt="" />
-        <AddCartButt />
       </div>
     </div>
   )
