@@ -1,11 +1,13 @@
 // src/ViewAllButton.js
 import React from 'react';
 import './ViewAllButton.css';
+import { ViewAllArrow } from '../../images';
 
 const ViewAllButton = ({ onViewAll }) => {
   return (
     <button className="view-all-button" onClick={onViewAll}>
-      View All Products
+      View All
+      <img src={ViewAllArrow}/>
     </button>
   );
 };

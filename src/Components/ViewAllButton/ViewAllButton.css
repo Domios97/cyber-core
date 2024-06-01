@@ -1,16 +1,22 @@
 /* src/ViewAllButton.css */
 .view-all-button {
-    background-color: #4CAF50;
-    color: white;
+    position: relative;
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    color: black;
     padding: 10px 20px;
     margin: 20px 0;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 550;
   }
-  
-  .view-all-button:hover {
-    background-color: #45a049;
+
+  .view-all-button img {
+    position: absolute;
+    top: 25%;
+    right: 0%;
+    width: 30px;
+    height: 25px;
   }
-  

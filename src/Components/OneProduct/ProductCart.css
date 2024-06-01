@@ -27,6 +27,10 @@
 .product-cart:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+.product-cart:hover .add-to-cart {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .product-cart img {
     width: 100%;

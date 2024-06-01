@@ -4,21 +4,16 @@ import './ProductCart.css';
 import { router, headset } from '../../images';
 
 function ProductCart() {
-  const divStyle = {
-    position: 'relative',
-    bottom: '5%',
-    left: '0%',
-    height: '40px',
-    fontsize: '16px',
-    fontweight: '700'
-  };
+
   return (
     <div>
-      <div className="product-cart">
+      <div className="product-cart" onClick={() => {
+        console.log("clicked");
+      }}>
         <img src={headset} alt="" />
         <p>Router</p>
         <p id='price'>234 700 DZD</p>
-        <AddCartButt style={divStyle} />
+        <AddCartButt addCartHomePage="latest-products"/>
       </div>
     </div>
   )
