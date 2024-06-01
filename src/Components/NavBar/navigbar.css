@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    font-family: 'Alata', sans-serif;
+}
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #252525;
+}
+nav{
+    height: 75px;
+    width: 100%;
+    top: 0;
+    background-color: #FDFFFC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.site-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.site-logo img {
+    width: 50px;
+    height: 40px;
+}
+.site-logo span {
+    font-family: 'Rubik';
+    font-size: 14px;
+    font-weight: 600;
+}
+.home-shop-group {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    height: 30px;
+}
+.home-shop img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.search-bar {
+    position: relative;
+    display: inline-block;
+    margin-left: 200px;
+}
+.search-bar input{
+    width: 400px;
+    height: 50px;
+    border: 1px solid #C0C0C0;
+    border-radius: 45px;
+    padding: 5px 13px;
+    outline: none;
+}
+.search-input:focus {
+    border: 1px solid #6d77f6;
+}
+.search-bar button{
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.search-button img{
+    width: 20px;
+    height: auto;
+}
+.right-nav {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+}
+.right-nav img {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;   
+    position: relative;
+}
+.about-contact {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.about-contact li{
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 550;
+}
+.about-contact li a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.about-contact li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color: #6d77f6; 
+    transition: width 0.3s ease-in-out;
+}
+
+.about-contact li a:hover::after {
+    width: 100%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    height: 28px;
+    background-color: #252525;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 1px 2px;
+    position: absolute;
+    z-index: 1;
+    bottom: -90%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #252525 transparent transparent transparent;
+}
+
+
+
