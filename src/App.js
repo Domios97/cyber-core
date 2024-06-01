@@ -1,31 +1,22 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/NavBar/Navigbar';
-import SiteFooter from './Components/Footer/sitefooter';
-import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+
+import SignUpPage from './Pages/SignUp/SignUpPage';
+import LoginPage from './Pages/Login/loginpage';
 
 
-function App() {
- 
-
-
-
+const App = () => {
   return (
-
     <Router>
-      <div className="App">
-        <Navbar/>
-        <div className="main-content">
-        
-        </div>
-        <CheckoutPage/>
-        <SiteFooter />
-      </div>
-    </Router>
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="*" element={<Navigate to="/login" />} />
+    </Routes>
+  </Router>
   );
-}
-
+};
 
 export default App;
 
