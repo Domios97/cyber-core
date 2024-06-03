@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-
-import SignUpPage from './Pages/SignUp/SignUpPage';
-import LoginPage from './Pages/Login/loginpage';
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginForm from './Pages/LoginForm/LoginForm';
+import SignupForm from './Pages/SignForm/SignupForm'
+import './App.css'; 
 
 const App = () => {
   return (
     <Router>
-    <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<SignUpPage />} />
-      <Route path="*" element={<Navigate to="/login" />} />
-    </Routes>
-  </Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/signup" element={<SignupForm />} />
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
-
