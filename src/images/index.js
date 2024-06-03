@@ -33,8 +33,14 @@ import ViewAllArrow from './ViewAllArrow.png';
 import cashDelivery from './cashDelivery.png';
 import fastDelivery from './fastDelivery.png';
 import FreeDelivery from './FreeDelivery.png';
+import Trash from './Trash.png';
+import checkout from './checkout.png';
+import WishlistButt from './wishlistButton.png';
 
 export {
+  WishlistButt,
+  checkout,
+  Trash,
   cashDelivery,
   FreeDelivery,
   fastDelivery,

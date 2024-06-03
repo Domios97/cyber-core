@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+.proceed-checkout {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 5px 0px;
+}
+
+.proceed-checkout button {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: none;
+    background-color: #6d77f6;
+    color: #FDFFFC;
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+    border-radius: 4px;
+}
+
+.proceed-checkout img {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    width: 35px;
+    height: 35px;
+
+}

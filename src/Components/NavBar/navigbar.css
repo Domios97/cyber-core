@@ -132,8 +132,10 @@ nav{
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 70px;
-    height: 28px;
+    font-size: 14px;
+    font-weight: 550;
+    width: 67px;
+    height: 26px;
     background-color: #252525;
     color: #fff;
     text-align: center;

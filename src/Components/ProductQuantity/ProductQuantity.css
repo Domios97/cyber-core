@@ -1,48 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .quantity-container {
     display: flex;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   .quantity-button {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     cursor: pointer;
     font-size: 24px;
-    color: white;
+    color: #6d77f6;
     margin: 0 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background-color 0.3s, transform 0.3s;
+    border: 1.5px solid #7f7f7f;
   }
   
   .quantity-button:hover {
     transform: scale(1.1);
   }
   
-  .increment {
-    background-color: green;
-  }
-  
-  .increment:hover {
-    background-color: darkgreen;
-  }
-  
-  .decrement {
-    background-color: red;
-  }
-  
-  .decrement:hover {
-    background-color: darkred;
-  }
-  
   .quantity-display {
     font-size: 24px;
     font-weight: bold;
-    min-width: 40px;
+    min-width: 12px;
     text-align: center;
   }
   

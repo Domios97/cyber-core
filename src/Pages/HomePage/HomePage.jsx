@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <div>
       <div className="hero-section">
-        <h1>Discver The Latest Hardware Computing Products !</h1>
+        <h1>Discover The Latest Hardware Computing Products !</h1>
         <ShopNowButton />
       </div>
       <div className="brandings-section">

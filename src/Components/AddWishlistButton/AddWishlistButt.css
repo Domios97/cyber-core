@@ -1,0 +1,20 @@
+.wishlist-button {
+    position: absolute;
+    top: -5px; 
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    background-color: none;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+    opacity: 0;
+}
+
+.wishlist-button button {
+    border: none;
+    background-color: white;
+}
+
+.wishlist-button img {
+    width: 40px;
+    height: 40px;
+}

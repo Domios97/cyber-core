@@ -83,19 +83,20 @@ h2 {
     height: 300px;
 }
 .latest-products-heading, .best-sales-heading  {
-    padding: 0px 50px;
+    padding: 0px 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
 }
+
 .latest-products h3 {
     color: #252525;
 }
 .latest-prodcuts hr {
     width: 150px;
     height: 5px;
-    margin-left: 50px;
+    margin-left: 70px;
     background-color: #6d77f6;
     margin-bottom: 10px;
 }
@@ -136,7 +137,7 @@ h2 {
 .best-sales hr {
     width: 150px;
     height: 5px;
-    margin-left: 50px;
+    margin-left: 70px;
     background-color: #6d77f6;
     margin-bottom: 10px;
 }

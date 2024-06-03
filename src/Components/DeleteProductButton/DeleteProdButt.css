@@ -1,0 +1,13 @@
+
+button {
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+#trash-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+}
