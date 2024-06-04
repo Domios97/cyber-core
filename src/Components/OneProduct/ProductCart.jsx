@@ -5,20 +5,17 @@ import { router, headset } from '../../images';
 import AddWishlistButt from '../AddWishlistButton/AddWishlistButt';
 
 function ProductCart() {
-
   return (
-    <div>
-      <div className="product-cart" onClick={() => {
-        console.log("clicked");
-      }}>
-        <AddWishlistButt />
-        <img src={headset} alt="" />
+    <div className="product-cart-container">
+      <div className="product-cart">
+        <AddWishlistButt customAddWishlist="product-detail" />
+        <img src={headset} alt="Headset" />
         <p>Router</p>
         <p id='price'>234 700 DZD</p>
-        <AddCartButt addCartHomePage="latest-products"/>
+        <AddCartButt addCartHomePage="latest-products" />
       </div>
     </div>
-  )
+  );
 }
 
-export default ProductCart
+export default ProductCart;

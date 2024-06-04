@@ -16,7 +16,7 @@
     font-weight: 700;
     line-height: 10px;
     min-height: 40px;
-    padding: 5px;
+    padding: 5px 0;
     text-align: center;
     position: absolute;
     bottom: 5%;
@@ -72,4 +72,22 @@
   width: 20px;
   height: 20px;
 }
+.add-to-cart.product-wishlist {
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 5%;
+  margin-left: 110px;
+  width: 60px;
+  height: 30px;
+  padding: 5px 0;
+}
+.add-to-cart.product-wishlist img {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 20px;
+  height: 20px;
+}
+
 

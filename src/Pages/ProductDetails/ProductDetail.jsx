@@ -41,7 +41,7 @@ function ProductDetails(){
                </form>
                <div className="product-cta">
                 <AddCartButt addCartStyle="custom-button"/>
-                <AddWishlistButt customAddWishlist="product-detail" />
+                <AddWishlistButt customAddToWishlist="addin-product" />
                </div>
             </div>
         </section>

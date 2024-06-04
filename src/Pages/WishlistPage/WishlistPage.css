@@ -1,8 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
-.sub-cart-wrap {
-    width: 350px;
+.sub-wishlist-wrap {
+    width: 500px;
     display: block;
     align-items: center;
     position: absolute;
@@ -13,11 +13,20 @@
     padding: 0px 20px;
     text-align: center;
     border: 1px solid #C0C0C0;
-    max-height: auto;
+    height: 600px;
+    overflow-y: scroll;
     transition: max-height 0.5s;
 }
 
-.sub-cart-wrap p {
+.sub-wishlist-wrap hr {
+    width: 120px;
+    height: 3px;
+    margin: auto;
+    background-color: #6d77f6;
+    margin-bottom: 10px;
+}
+
+.sub-wishlist-wrap p {
     font-size: 22px;
     font-weight: 550;
 }

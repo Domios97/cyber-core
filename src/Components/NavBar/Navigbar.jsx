@@ -10,10 +10,12 @@ const Navbar = () => {
         <span>CyberCore</span>
       </div>
       <div className="home-shop-group">
+        <a href="/">
         <div className="home-shop tooltip">
           <img src={home} alt="Home" />
           <span className="tooltiptext">Home</span>
         </div>
+        </a>
         <div className="home-shop tooltip">
           <img src={shop} alt="Shop" />
           <span className="tooltiptext">Shop</span>
