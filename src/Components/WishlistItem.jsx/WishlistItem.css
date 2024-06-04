@@ -1,0 +1,22 @@
+/* src/components/WishlistItem/WishlistItem.css */
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .wishlist-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item-details p {
+    margin: 5px 0;
+  }
+  

@@ -1,18 +1,24 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Navbar from './Components/NavBar/Navigbar';
-import SiteFooter from './Components/Footer/sitefooter';
-import HomePage from './Pages/HomePage/HomePage';
-import ProductDetails from './Pages/ProductDetails/product_detail';
+import Footer from './Components/Footer/sitefooter';
+import WishlistPage from './Pages/WishlistPage/WishlistPage';
+import { WishlistProvider } from './Contexts/WishlistContext';
+import ProductCart from './Components/OneProduct/ProductCart';
 
 
-const App = () => {
-    return ( 
-     <>
-        <Navbar />
-        <HomePage />
-        <SiteFooter />
-     </>
-    );
-};
+function App() {
+  return (
+    <WishlistProvider>
+      <div className="app-container">
+        <main>
+          <ProductCart/>
+          <WishlistPage /> {/* Include the Wishlist page component */}
+        </main>
+      </div>
+    </WishlistProvider>
+  );
+}
 
 export default App;
