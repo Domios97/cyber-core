@@ -7,7 +7,6 @@ import BrandingCarousel from '../../Components/BrandingsCarousel/BrandingCarouse
 import ProductCart from '../../Components/OneProduct/ProductCart';
 import RightNextButton from '../../Components/RightButton/RightNextButton'
 import LeftNextButton from '../../Components/LeftButton/LeftNextButton';
-import HeroSection from '../../Components/HeroSection/HeroSection';
 import ShopNowButton from '../../Components/ShopNowButton/ShopNowButton';
 import ViewAllButton from '../../Components/ViewAllButton/ViewAllButton';
 

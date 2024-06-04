@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form_container {
+  position: fixed;
+  max-width: 380px;
+  width: 100%;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 4px;
+  border: 1px solid #6d77f6;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  pointer-events: auto; 
+  transition: all 0.4s ease-out;
+}
+#form-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  color: #0b0217;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.form_container h2 {
+  font-size: 38px;
+  font-weight: 600;
+}
+.input_box {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  height: 40px;
+}
+.input_box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+}
+.input_box input:focus {
+  border-color: #6d77f6;
+}
+
+.input_box .icon {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 18px;
+  color: #707070;
+  margin-right: 10px;
+}
+.input_box .visibility_toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_container a {
+  color: #6d77f6;
+  font-size: 12px;
+}
+.form_container a:hover {
+  text-decoration: underline;
+}
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+.checkbox input {
+  accent-color: #6d77f6;
+}
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+}
+.form_container .button {
+  background: #6d77f6;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.divider {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.divider span {
+  background-color: #ffffff;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: 1px;
+  background-color: #ccc;
+  vertical-align: middle;
+}
