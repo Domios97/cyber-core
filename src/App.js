@@ -4,10 +4,10 @@ import './App.css';
 import Navbar from './Components/NavBar/Navigbar';
 import SiteFooter from './Components/Footer/sitefooter';
 import HomePage from './Pages/HomePage/HomePage';
-import ProductDetailsPage from './Pages/productDetails/ProductDetailsPage';
 import Cart from './Pages/Cart/Cart';
 import LoginForm from './Pages/LoginForm/LoginForm';
 import SignupForm from './Pages/SignForm/SignupForm';
+import ProductDetail from './Pages/ProductDetails/ProductDetail';
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -30,8 +30,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginForm onClose={hideForms} />} />
         <Route path="/signup" element={<SignupForm onClose={hideForms} />} />
-        <Route path="/product-details" element={<ProductDetailsPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product-detail" element={<ProductDetail />} />
       </Routes>
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}
