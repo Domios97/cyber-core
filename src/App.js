@@ -4,7 +4,7 @@ import './App.css';
 import Products, { products as productData } from './products';
 import CategoryFilter from './CategoryFilter';
 import FilterSort from './FilterSort';
-import SearchBar from './SearchBar';
+import SearchBar from './Components/SearchBar'
 import ProductDetails from './ProductDetails';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -92,7 +92,7 @@ function App() {
         </div>
       </div>
     </Router>
->>>>>>> chihab
+
   );
 };
 
