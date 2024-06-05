@@ -36,8 +36,18 @@ import FreeDelivery from './FreeDelivery.png';
 import Trash from './Trash.png';
 import checkout from './checkout.png';
 import WishlistButt from './wishlistButton.png';
+import myorders from './myorders.png';
+import opentoside from './opentoside.png';
+import exit from './exit.png';
+import changepass from './changepass.png';
+import avatar from './avatar.png';
 
 export {
+  myorders,
+  avatar,
+  opentoside,
+  exit,
+  changepass,
   WishlistButt,
   checkout,
   Trash,

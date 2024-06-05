@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.order-container {
+    width:95%;
+    margin: 5px auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+   
+}
+
+.top-part {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-id-date {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.order-id-date p {
+    margin-top: 10px;
+    font-weight: 550;
+}
+
+.cancel-done {
+    display: flex;
+}
+
+.cancel-done button {
+    border: none;
+    background-color: white;
+    width: 140px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#delete-order {
+    border: 2px solid rgb(182, 61, 61);
+    color: red;
+}
+
+#recived-order {
+    border: none;
+    color: white;
+    background-color: #6d77f6;
+}
+
+.order-container hr {
+    background-color: #d6d6d6;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.order-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    height: 150px;
+    width: 100%;
+}
+
+.one-order-info {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+}
+
+.one-order-info p {
+    margin: 3px 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500px;
+}
+.one-order-info h4{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.order-info hr {
+    height: 100%;
+    width: 2px;
+    background-color: #d6d6d6;
+}
+
+.product-purchased {
+    width:100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.one-purchased-product {
+    display: flex;
+    margin-top: 20px;
+    width: 30%;
+    height: 100%;
+}
+
+.one-purchased-product img{
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
+.purchased-product-info p {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500px;
+}
