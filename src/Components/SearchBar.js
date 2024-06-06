@@ -1,25 +1,42 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import loupeIcon from '../images/loupe.png'; // Adjust the path to your image
+
 import '../CSS/SearchBar.css'
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+const SearchBar = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    onSearch(query);
+  const handleSearch = () => {
+    // Redirect to ShopPage with search query as URL parameter
+    navigate(`/shop?search=${encodeURIComponent(searchQuery)}`);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
   };
 
   return (
-    <form className="search-bar" onSubmit={handleSearch}>
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div className="search-bar">
+      <div className="search-input-wrapper">
+        <input
+          type="search"
+          placeholder="Search products..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyPress={handleKeyPress} // Allow search on Enter key press
+        />
+        <img
+          src={loupeIcon}
+          alt="Search"
+          onClick={handleSearch}
+          className="search-icon"
+        />
+      </div>
+    </div>
   );
 };
-
 export default SearchBar;

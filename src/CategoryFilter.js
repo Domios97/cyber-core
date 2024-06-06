@@ -1,44 +1,32 @@
 import React, { useState } from 'react';
 import './CategoryFilter.css';
 
-const CategoryFilter = ({ categories, onSelectCategory }) => {
-  const [openCategory, setOpenCategory] = useState(null);
+const CategoryFilter = ({ categories, onSelectCategory, selectedCategory }) => {
+  const [expandedCategory, setExpandedCategory] = useState(null);
 
-  const handleCategoryClick = (category, subcategory = null) => {
-    onSelectCategory(category, subcategory);
-    if (subcategory === null) {
-      setOpenCategory(openCategory === category ? null : category);
+  const handleCategoryClick = (category) => {
+    if (category === expandedCategory) {
+      setExpandedCategory(null);
+    } else {
+      setExpandedCategory(category);
     }
+    onSelectCategory(category);
   };
 
   return (
     <div className="category-filter">
-      <h2>Categories</h2>
-      <ul className="category-list">
-        {Object.keys(categories).map(category => (
-          <li key={category} className={`category-item ${openCategory === category ? 'open' : ''}`}>
-            <div className="category-name" onClick={() => handleCategoryClick(category)}>
-              {category}
-              {categories[category].length > 0 && (
-                <span className="arrow">{openCategory === category ? '▲' : '▼'}</span>
-              )}
-            </div>
-            {categories[category].length > 0 && (
-              <ul className="subcategories">
-                {categories[category].map(subcategory => (
-                  <li key={subcategory} className="subcategory-item">
-                    <span className="subcategory-name" onClick={() => handleCategoryClick(category, subcategory)}>
-                      {subcategory}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
+      {Object.keys(categories).map(category => (
+        <div key={category} className="category-item">
+          <div
+            className={`category-name ${category === selectedCategory ? 'selected' : ''}`}
+            onClick={() => handleCategoryClick(category)}
+          >
+            {category}
+          </div>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
 export default CategoryFilter;

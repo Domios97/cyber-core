@@ -28,8 +28,22 @@ import acer from './acer.png';
 import msi from './msi.png';
 import gigabyte from './gigabyte.png';
 import rightArrow from './rightArrow.png';
-import LeftArrow from './LeftArrow.png'
+import LeftArrow from './LeftArrow.png';
+import ViewAllArrow from './ViewAllArrow.png';
+import cashDelivery from './cashDelivery.png';
+import fastDelivery from './fastDelivery.png';
+import FreeDelivery from './FreeDelivery.png';
+import Trash from './Trash.png';
+import checkout from './checkout.png';
+import WishlistButt from './wishlistButton.png';
+
 export {
+  WishlistButt,
+  checkout,
+  Trash,
+  cashDelivery,
+  FreeDelivery,
+  fastDelivery,
   rightArrow,
   LeftArrow,
   loupe,
@@ -60,5 +74,6 @@ export {
   promoGPU,
   acer,
   msi,
-  gigabyte
+  gigabyte,
+  ViewAllArrow
 };

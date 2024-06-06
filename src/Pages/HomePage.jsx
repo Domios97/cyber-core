@@ -8,12 +8,13 @@ import BrandingCarousel from '../Components/BrandingCarousel';
 import ProductCart from '../Components/ProductCart';
 import RightNextButton from '../Components/RightNextButton'
 import LeftNextButton from '../Components/LeftNextButton';
-
+import Navbar from '../Components/NavBar/Navigbar';
 
 function HomePage() {
   return (
     <div>
       <div className="hero-section">
+        
         <h1>Discver The Latest Hardware Computing Products !</h1>
         <button type='' onClick='' class="shopnow-button" role="button">Shop Now </button>
       </div>

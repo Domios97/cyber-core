@@ -1,0 +1,35 @@
+.wishlist-button {
+    position: absolute;
+    top: -5px; 
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    background-color: none;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+    opacity: 0;
+}
+
+.wishlist-button button {
+    border: none;
+    background-color: white;
+}
+
+.wishlist-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.wishlist-button.addin-product {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(3px); 
+}
+
+.wishlist-button.product-detail:hover {
+    transform: translateY(-4px);
+}
