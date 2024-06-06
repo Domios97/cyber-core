@@ -181,3 +181,9 @@ a {
   background-color: #ccc;
   vertical-align: middle;
 }
+
+.input_error_message {
+  color:red; 
+  margin-block: 10px 5px ;
+  transform: translateX(-65px);
+}

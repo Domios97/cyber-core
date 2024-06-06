@@ -1,0 +1,38 @@
+
+
+.dashbord-container{
+
+    padding-top: 50px;
+    height: 670px;
+    display: flex;
+    gap: 10px;
+}
+
+.dashbord-menu {
+    border: 1px black solid;
+    width: 400px;
+    
+}
+.dashbord-menu .dashbord-head{
+    border: 1px red solid;
+    display: flex;
+    align-items: center;
+    padding-left: 10px ;
+    height: 70px;
+}
+
+.dashbord-head .dashbord-logo{
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.dashbord-head > p {
+  margin-block: 0px;
+  font-size: 28px;
+
+}
+
+
+.dashbord-desplay {
+    flex-grow: 1;
+}

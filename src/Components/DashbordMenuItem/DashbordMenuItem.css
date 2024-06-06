@@ -1,0 +1,13 @@
+.dashbord-menu-item {
+    border: 1px red solid;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.dashbord-item-icon{
+    width: 30px;
+    height: 30px;
+    color: grey;
+    margin-right: 20px;
+}

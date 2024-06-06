@@ -10,6 +10,7 @@ import SignupForm from './Pages/SignForm/SignupForm';
 import ResetPasswordForm from './Pages/ResetPasswordForm/ResetPasswordForm';
 import ProductDetail from './Pages/ProductDetails/ProductDetail';
 import WishlistPage from './Pages/WishlistPage/WishlistPage';
+import AdminDashbord from './Pages/AdminDashbordPage/AdminDashbord';
 
 
 const App = () => {
@@ -28,7 +29,8 @@ const App = () => {
 
   return (
     <div>
-      {!hideNavAndFooter && <Navbar/>}
+      <AdminDashbord />
+      {/* {!hideNavAndFooter && <Navbar/>}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginForm onClose={hideForms} />} />
@@ -40,7 +42,7 @@ const App = () => {
       </Routes>
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}
-      {isSignupFormVisible && <SignupForm onClose={hideForms} />}
+      {isSignupFormVisible && <SignupForm onClose={hideForms} />} */}
     </div>
   );
 };

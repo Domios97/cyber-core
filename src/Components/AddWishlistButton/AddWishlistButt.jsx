@@ -7,7 +7,7 @@ function AddWishlistButt({customAddToWishlist}) {
   return (
     <div>
         <div className="wishlist-button">
-            <button type='' onClick=""><img src={WishlistButt} className={`wishlist-button ${customAddToWishlist}`} /></button>
+            <button ><img src={WishlistButt} className={`wishlist-button ${customAddToWishlist}`} /></button>
         </div>
     </div>
   )
