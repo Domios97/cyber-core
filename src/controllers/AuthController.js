@@ -7,9 +7,9 @@ class AuthController {
             method: "post",
             headers: {
                 "Accept": "application/json",
-                "Content-Type": "application/json" // Specify content type as JSON
+                "Content-Type": "application/json" 
             },
-            body: JSON.stringify({ // Convert JavaScript object to JSON string
+            body: JSON.stringify({ 
                 email: email,
                 password: password
             })
@@ -23,9 +23,9 @@ class AuthController {
             method: "post",
             headers: {
                 "Accept": "application/json",
-                "Content-Type": "application/json" // Specify content type as JSON
+                "Content-Type": "application/json" 
             },
-            body: JSON.stringify({ // Convert JavaScript object to JSON string
+            body: JSON.stringify({ 
                 email: email,
                 password: password
             })
@@ -33,7 +33,6 @@ class AuthController {
         const responseBody = await response.json();
         return responseBody;
     }
-    
 }
 
 export default AuthController;

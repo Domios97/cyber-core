@@ -12,7 +12,10 @@ class StorageManager{
   static removeToken(){
     localStorage.removeItem(this.tokenKeyName);
   }
-  
+
+  static getUserToken(){
+    return localStorage.getItem(this.tokenKeyName);
+  }  
 } 
 
 export default StorageManager;

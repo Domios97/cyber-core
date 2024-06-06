@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { wallpaper, FreeDelivery, cashDelivery, fastDelivery } from '../../images';
 import './HomePage.css';
 import CatgorieCarousel from '../../Components/CategoryCarousel/CategorieCarousel';
@@ -9,10 +9,34 @@ import RightNextButton from '../../Components/RightButton/RightNextButton'
 import LeftNextButton from '../../Components/LeftButton/LeftNextButton';
 import ShopNowButton from '../../Components/ShopNowButton/ShopNowButton';
 import ViewAllButton from '../../Components/ViewAllButton/ViewAllButton';
+import ProductController from '../../controllers/ProductController';
+import CatigoryController from '../../controllers/CatigoryController';
+import CartController from '../../controllers/CartController';
 
 
 function HomePage() {
+
+  const [products , setProducts] = useState(null);
+  const [catigorys , setCatigorys] = useState(null);
+  const [cartItem , setCartItem] = useState(null);
   
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        var  allProducts = await ProductController.getAll();
+        var  allCatigorys = await CatigoryController.getAll();
+        var allCartItems = await CartController.getAll(); 
+        console.log(allProducts);
+        console.log(allCatigorys);
+        console.log(allCartItems);
+
+      } catch (error) {
+        console.log("error: ", error);
+      }
+    };
+  
+    fetchData(); // Call the async function immediately inside the useEffect hook
+  }, []);
   return (
     <div>
       <div className="hero-section">

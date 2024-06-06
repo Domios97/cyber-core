@@ -26,7 +26,7 @@ const LoginForm = () => {
       try {
         const auth = new AuthController();
         const responseBody = await auth.login(email, password);
-        setResponse(responseBody); // Update the state with the received data
+        setResponse(responseBody);
         if(response.status_code === 202){
          
           StorageManager.storeToken(response.access_token);

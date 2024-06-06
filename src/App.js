@@ -29,8 +29,7 @@ const App = () => {
 
   return (
     <div>
-      <AdminDashbord />
-      {/* {!hideNavAndFooter && <Navbar/>}
+      {!hideNavAndFooter && <Navbar/>}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginForm onClose={hideForms} />} />
@@ -42,7 +41,7 @@ const App = () => {
       </Routes>
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}
-      {isSignupFormVisible && <SignupForm onClose={hideForms} />} */}
+      {isSignupFormVisible && <SignupForm onClose={hideForms} />}
     </div>
   );
 };
