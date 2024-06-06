@@ -11,7 +11,7 @@ import ResetPasswordForm from './Pages/ResetPasswordForm/ResetPasswordForm';
 import ProductDetail from './Pages/ProductDetails/ProductDetail';
 import WishlistPage from './Pages/WishlistPage/WishlistPage';
 import MyAccountPage from './Pages/MyAccountPage/MyAccountPage';
-
+import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -39,6 +39,7 @@ const App = () => {
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/product-detail" element={<ProductDetail />} />
         <Route path="/account" element={<MyAccountPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}

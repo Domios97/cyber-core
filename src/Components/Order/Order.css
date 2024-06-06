@@ -107,29 +107,10 @@ a {
     background-color: #d6d6d6;
 }
 
-.product-purchased {
+.products-purchased-container {
+    margin-top: 20px;
     width:100%;
     height: 90px;
     display: flex;
     justify-content: space-between;
-}
-
-.one-purchased-product {
-    display: flex;
-    margin-top: 20px;
-    width: 30%;
-    height: 100%;
-}
-
-.one-purchased-product img{
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-}
-
-.purchased-product-info p {
-    margin: 10px 0;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 500px;
 }

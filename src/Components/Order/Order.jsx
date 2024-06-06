@@ -1,6 +1,7 @@
 import React from 'react';
 import './Order.css';
 import { desktop } from '../../images';
+import ProductInOrder from '../ProductInOrder/ProductInOrder';
 
 function Order() {
   return (
@@ -38,29 +39,12 @@ function Order() {
                 </div>
             </div>
             <hr />
-            <div className="product-purchased">
-                <div className="one-purchased-product">
-                    <img src={desktop} alt="" />
-                    <div className="purchased-product-info">
-                        <p>Product Name</p>
-                        <p>Price: 24 078</p>
-                    </div>
-                </div>
-                <div className="one-purchased-product">
-                    <img src={desktop} alt="" />
-                    <div className="purchased-product-info">
-                        <p>Product Name</p>
-                        <p>Price: 24 078</p>
-                    </div>
-                </div>
-                <div className="one-purchased-product">
-                    <img src={desktop} alt="" />
-                    <div className="purchased-product-info">
-                        <p>Product Name</p>
-                        <p>Price: 24 078</p>
-                    </div>
-                </div>
+            <div className="products-purchased-container">
+                <ProductInOrder />
+                <ProductInOrder />
+                <ProductInOrder />
             </div>
+            
         </div>
     </div>
   )

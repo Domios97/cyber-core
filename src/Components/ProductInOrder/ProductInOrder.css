@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.product-in-order-container {
+    width: 220px;
+    height: 100px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.product-in-order-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    background-size: cover;
+}
+
+.product-ino-order-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.product-ino-order-info p {
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+
