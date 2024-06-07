@@ -55,8 +55,9 @@ function AdminDashboard() {
         </div>
       </section>
       <section className='dashboard-right-side'>
-        <h3>Dashboard</h3>
-        <hr />
+        <div className="dashboard-header">
+          <h3 id="admin-dashboard">Admin Dashboard</h3>
+        </div>
         <div className="dashboard-item-display-section">
           {activeComponent === 'product' && <DashboardProductDisplay />}
           {activeComponent === 'category' && <DashboardCategoryDisplay />}

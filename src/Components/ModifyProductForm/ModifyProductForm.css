@@ -7,7 +7,12 @@
   font-family: 'Alata' sans-serif;
 }
 
-.product-form-container {
+#modify-header {
+  color: #252525;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modify-product-form-container {
   background-color: #fff;
   padding: 20px;
   width: 800px;
@@ -17,7 +22,7 @@
   border-radius: 5px;
 }
 
-.product-form-container form {
+.modify-product-form-container form {
   display: flex;
   flex-direction: column;
 }
@@ -77,7 +82,7 @@ textarea {
   margin: 0 0 10px 0;
 }
 
-.product-form-container button {
+.modify-product-form-container button {
   color: #6d77f6;
   padding: 10px 20px;
   font-size: 18px;
@@ -90,7 +95,7 @@ textarea {
   background-color: #f7fafc;
 }
 
-.product-form-container button:hover {
+.modify-product-form-container button:hover {
   background-color: #6d77f6;
   color: white;
   transition: 0.2s;

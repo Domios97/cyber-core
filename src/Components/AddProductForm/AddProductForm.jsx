@@ -4,7 +4,9 @@ import './AddProductForm.css';
 function AddProductForm() {
   return (
     <div>
+      <h3>Fill the Fields To Add A New Product</h3>
         <div class="product-form-container">
+            
               <form id="productForm">
                   <div class="form-row">
                       <div class="form-group">
