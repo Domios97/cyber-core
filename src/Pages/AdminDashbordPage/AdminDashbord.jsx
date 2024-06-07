@@ -1,25 +1,70 @@
 import { GiCyberEye } from "react-icons/gi";
-
-import React from 'react'
+import { FiShoppingCart } from "react-icons/fi";
+import { MdOutlineKeyboardArrowRight, MdOutlineLogout } from "react-icons/md";
+import { TbCategoryPlus } from "react-icons/tb";
+import { LuFilePlus } from "react-icons/lu";
+import { sitelogo } from '../../images';
+import React, { useState } from 'react';
 import "./AdminDashbord.css";
-import DashbordMenuItem from "../../Components/DashbordMenuItem/DashbordMenuItem";
-import { LuShoppingCart } from "react-icons/lu";
-function AdminDashbord() {
+import DashboardProductDisplay from '../../Components/DashboardProductDisplay/DashboardProductDisplay';
+import DashboardCategoryDisplay from '../../Components/DashboardCategoryDisplay/DashboardCategoryDisplay';
+import DashboardOrdersDisplay from '../../Components/DashboardOrdersDisplay/DashboardOrdersDisplay';
+
+function AdminDashboard() {
+  const [activeComponent, setActiveComponent] = useState('category');
+
+  const handleManageProductsClick = () => {
+    setActiveComponent('product');
+  };
+
+  const handleManageCategoriesClick = () => {
+    setActiveComponent('category');
+  };
+
+  const handleManageOrdersClick = () => {
+    setActiveComponent('order');
+  };
+
   return (
-    <div className='dashbord-container'>
-     <section className='dashbord-menu'>
-        <div className='dashbord-head'>
-          <GiCyberEye className="dashbord-logo"/>
-          <p>Cyber <span>Core</span></p>
+    <div className='dashboard-container'>
+      <section className='dashboard-left-side'>
+        <div className="logo-part">
+          <img src={sitelogo} alt="Logo" />
+          <span>CyberCore</span>
         </div>
-        <DashbordMenuItem>
-          <LuShoppingCart className="dashbord-item-icon"/>
-          <p>Products</p>
-        </DashbordMenuItem>
-     </section>
-     <section className='dashbord-desplay'></section>
+        <div className="dashboard-functionalities">
+          <div className="dashboard-functionalities-parts" onClick={handleManageProductsClick}>
+            <FiShoppingCart className="dashboard-icons" />
+            <span>Manage Products</span>
+            <MdOutlineKeyboardArrowRight className="dashboard-right-arrows" />
+          </div>
+          <div className="dashboard-functionalities-parts" onClick={handleManageCategoriesClick}>
+            <TbCategoryPlus className="dashboard-icons" />
+            <span>Manage Categories</span>
+            <MdOutlineKeyboardArrowRight className="dashboard-right-arrows" />
+          </div>
+          <div className="dashboard-functionalities-parts" onClick={handleManageOrdersClick}>
+            <LuFilePlus className="dashboard-icons" />
+            <span>Manage Orders</span>
+            <MdOutlineKeyboardArrowRight className="dashboard-right-arrows" />
+          </div>
+          <div className="admin-logout">
+            <MdOutlineLogout className="admin-logout-icon" />
+            <span>Logout</span>
+          </div>
+        </div>
+      </section>
+      <section className='dashboard-right-side'>
+        <h3>Dashboard</h3>
+        <hr />
+        <div className="dashboard-item-display-section">
+          {activeComponent === 'product' && <DashboardProductDisplay />}
+          {activeComponent === 'category' && <DashboardCategoryDisplay />}
+          {activeComponent === 'order' && <DashboardOrdersDisplay />}
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default AdminDashbord
+export default AdminDashboard;

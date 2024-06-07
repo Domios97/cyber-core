@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alata' sans-serif;
+}
+
+.add-category-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 30px auto;
+    background-color: #f7fafc;
+  }
+  
+  .category-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .add-category-form-container input[type="text"], input[type="file"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .add-category-form-container input[type="text"]:focus, input[type="file"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .add-category-form-container button {
+    background-color: #f7fafc;
+    color: #6d77f6;
+    border: 1px solid #6d77f6;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 350px;
+    font-size: 18px;
+    font-weight: 550;
+    font-family: 'Alata', sans-serif;
+  }
+  
+  .add-category-form-container button:hover {
+    background-color: #6d77f6;
+    color: white;
+  }

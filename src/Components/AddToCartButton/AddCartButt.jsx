@@ -12,3 +12,7 @@ const AddCartButt = ({addCartHomePage, addCartStyle}) => {
 }
 
 export default AddCartButt
+
+
+
+

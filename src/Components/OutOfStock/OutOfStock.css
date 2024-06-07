@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+.out-of-stcok-badge {
+    width: 80px;
+    height: 25px;
+    background-color: rgba(247, 192, 172, 0.568);
+    border-radius: 5px;
+}
+
+.out-of-stcok-badge p {
+    width: 100%;
+    color: rgb(187, 67, 23);
+    font-size: 13px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}

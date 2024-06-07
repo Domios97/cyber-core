@@ -18,7 +18,7 @@ const App = () => {
   const [isSignupFormVisible, setSignupFormVisible] = useState(false);
 
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password';
+  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password'|| location.pathname === '/shop';
 
  
 
