@@ -14,7 +14,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
     margin: 0 3px;
     border: 1px solid rgb(224, 221, 221);
     border-radius: 3px;
@@ -28,7 +27,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.product-cart:hover .add-to-cart {
+/* .product-cart:hover .add-to-cart {
     opacity: 1;
     transform: translateY(0);
 }
@@ -36,20 +35,57 @@
 .product-cart:hover .wishlist-button {
     top: 3%;
     opacity: 1;
-}
+} */
 
 .product-cart img {
-    width: 100%;
-    height: 50%;
+    height: 100px;
     object-fit: contain;
 }
 
-.product-cart p {
+.product-cart > p{
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    margin-block: 10px;
     font-weight: 600;
 }
-
+.product-cart > p:nth-child(3){
+    color: rgba(103, 58, 183, 1);
+    margin-block-end: 0px;
+}
+.product-cart > p:nth-child(2){
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+}
 #price {
     color: rgb(222, 51, 51);
+}
+
+.product-cart > div:last-of-type button:first-of-type {
+    padding: 10px;
+    background-color: rgba(103, 58, 183, 1);
+    color: white;
+    font-weight: 600;
+    word-spacing: 2px;
+    border-radius: 2px;
+    width: 100px;
+    box-shadow: 0px 3px 2px rgb(209, 209, 209) ;
+}
+
+.product-cart > div:last-of-type{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.product-cart > div:last-of-type > button:last-of-type {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    box-sizing: border-box;
+}
+.togglable-heart{
+    width: 80%;
+    height: 80%;
+    filter: drop-shadow(2px 2px 2px rgb(199, 199, 199));
 }

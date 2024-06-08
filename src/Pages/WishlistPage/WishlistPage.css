@@ -5,7 +5,8 @@
     width: 500px;
     display: block;
     align-items: center;
-    position: absolute;
+    position: fixed;
+    z-index: 80;
     top: 12.3%;
     right: 0%;
     background-color: white;
@@ -13,8 +14,9 @@
     padding: 0px 20px;
     text-align: center;
     border: 1px solid #C0C0C0;
-    height: 600px;
-    overflow-y: scroll;
+    height: 640px;
+    max-height: 640px;
+    overflow-y: auto;
     transition: max-height 0.5s;
 }
 

@@ -3,11 +3,11 @@ import './AddWishlistButt.css';
 import { WishlistButt } from '../../images';
 
 
-function AddWishlistButt({customAddToWishlist}) {
+function AddWishlistButt() {
   return (
     <div>
         <div className="wishlist-button">
-            <button ><img src={WishlistButt} className={`wishlist-button ${customAddToWishlist}`} /></button>
+            <button ><img   className="wishlist-butto " alt ="image"/>Add to cart</button>
         </div>
     </div>
   )

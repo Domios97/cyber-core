@@ -10,7 +10,7 @@ class ProductController{
    static async getAll(){
 
     var userInfo = await Auth.me();
-    var userToken = StorageManager.getUserToken();
+    var userToken = Auth.isLogedIn();
     var userId = userInfo.data.id;
     var response = await fetch(ApiRequestGenerator.generateUrl("product/all?user_id="+userId+"&token="+userToken), {
         method: "get",

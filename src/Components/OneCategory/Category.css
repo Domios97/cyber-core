@@ -30,12 +30,16 @@
 
 .one-categorie img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: contain;
 }
 
 .one-categorie p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    /* font-family: 'Poppins', sans-serif;
+    
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 40px; */
+    font-size: 14px;
+    margin-block: 20px 0px;
+    flex-grow: 1;
 }

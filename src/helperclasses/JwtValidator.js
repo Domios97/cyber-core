@@ -10,7 +10,7 @@ class JwtValidator {
     }
   
     static hasExpired(timeExpiration) {
-      return Date.now() > timeExpiration;
+      return Math.floor(Date.now() / 1000) > timeExpiration;
     }
   }
 

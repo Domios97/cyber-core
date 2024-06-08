@@ -18,7 +18,7 @@ function BrandingCarousel() {
               <img src={gigabyte} alt="" />
               <img src={acer} alt="" />
             </div>
-            <div className="branding-carousel">
+            {/* <div className="branding-carousel">
               <img src={nvidia} alt="" />
               <img src={asus} alt="" />
               <img src={apple} alt="" />
@@ -28,7 +28,7 @@ function BrandingCarousel() {
               <img src={msi} alt="" />
               <img src={gigabyte} alt="" />
               <img src={acer} alt="" />
-            </div>
+            </div> */}
           </div>
         </div>
   );

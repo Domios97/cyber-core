@@ -4,18 +4,10 @@ import StorageManager from "../helperclasses/StorageManager";
 
 
 class Auth {
-   
-    static tokenKeyName = "user_access_token";
     
     static isLogedIn() {
-        const userToken = localStorage.getItem(Auth.tokenKey);
-    
-        if (!userToken) {
-          return null;
-        }
-    
+        const userToken = StorageManager.getUserToken();
         const expireAt = JwtValidator.getJsonJwtPayload(userToken);
-    
         if (JwtValidator.hasExpired(expireAt.exp)) {
           localStorage.removeItem(Auth.tokenKey);
           return null;

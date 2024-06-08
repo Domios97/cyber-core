@@ -75,7 +75,9 @@ class FavoriteController {
                 "user_id" : userInfo.data.id,
             })
         });
-
-        return await response.text();
+        var responseBody = await response.json();
+        return responseBody;
     }
 }
+
+export default FavoriteController;

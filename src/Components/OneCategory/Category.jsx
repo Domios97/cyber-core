@@ -3,12 +3,12 @@ import './Category.css';
 import { desktop } from '../../images';
 
 
-function Category() {
+function Category(props) {
   return (
     <div>
       <div className="one-categorie">
-        <img src={desktop} alt="" />
-        <p>PCs/Desktops</p>
+        <img src={props.imagePath} alt="" />
+        <p>{props.name}</p>
       </div>
     </div>
   )

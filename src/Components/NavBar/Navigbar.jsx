@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import './navigbar.css';
 import { shop, favori, loupe, panier, account, sitelogo, home } from "../../images";
+import { CartContext } from "../../Contexts/CartProvider";
+import { FavoriteContext } from "../../Contexts/FavoriteProvider";
 
 const Navbar = () => {
+
+  const {displayCart , setDisplayCart, cartItems , setCartItems} = useContext(CartContext);
+  const {displayFavorite, setDisplayFavorite, favoriteItems, setFavoriteItems} = useContext(FavoriteContext);
+
   return (
     <nav>
       <div className="site-logo">
@@ -37,11 +43,13 @@ const Navbar = () => {
       </div>
       <div className="right-nav">
         <div className="tooltip">
-          <img src={favori} alt="Wishlist" />
+          <div className= "navbar-counter">{favoriteItems && favoriteItems.data.length}</div>
+          <img src={favori} alt="Wishlist" onClick={()=>{setDisplayFavorite(!displayFavorite && !displayCart ? true : false)}}/>
           <span className="tooltiptext">Wishlist</span>
         </div>
         <div className="tooltip">
-          <img src={panier} alt="Cart" />
+        <div className= "navbar-counter">{cartItems && cartItems.data.length}</div>
+          <img src={panier} alt="Cart" onClick={()=>{setDisplayCart(!displayCart && !displayFavorite ? true : false) }}/>
           <span className="tooltiptext">Cart</span>
         </div>
         <div className="tooltip">

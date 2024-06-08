@@ -14,9 +14,8 @@ a {
 }
 
 .site-footer {
-    position: static;
-    bottom: 0;
     display: block;
+    margin-top: 20px;
 }
 
 .upper-footer {
