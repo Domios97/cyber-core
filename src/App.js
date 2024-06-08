@@ -10,6 +10,7 @@ import SignupForm from './Pages/SignForm/SignupForm';
 import ResetPasswordForm from './Pages/ResetPasswordForm/ResetPasswordForm';
 import ProductDetail from './Pages/ProductDetails/ProductDetail';
 import WishlistPage from './Pages/WishlistPage/WishlistPage';
+import AboutUs from './Pages/AboutUs/AboutUs';
 
 
 const App = () => {
@@ -38,6 +39,8 @@ const App = () => {
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/product-detail" element={<ProductDetail />} />
       </Routes>
+      <AboutUs/>
+
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}
       {isSignupFormVisible && <SignupForm onClose={hideForms} />}
