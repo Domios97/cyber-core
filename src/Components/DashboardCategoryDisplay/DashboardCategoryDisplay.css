@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.category-display-container {
+    width: 100%;
+    height: 590px;
+    background-color: white;
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 800px;
+    border-radius: 10px;
+}
+.category-section-heading {
+    display: flex;
+    align-items: center;
+}
+
+.category-section-heading p {
+    font-size: 26px;
+    font-weight: 500;
+    margin-left: 150px;
+    margin-bottom: 30px;
+}
+
+.category-section-heading button {
+    width: 200px;
+    height: 50px;
+    border: 1px solid #6d77f6;
+    border-radius: 10px;
+    color:  #6d77f6;
+    font-size: 18px;
+    font-weight: 550;
+    font-family: 'Alata', sans-serif;
+}
+
+.category-section-heading button:hover {
+    background-color: #6d77f6;
+    color: white;
+    transition: 0.2s;
+}
+
+.category-name-id-bar {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #f7fafc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.category-name-id-bar p {
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 110px 0 0;
+}
+
+#category-base-name {
+    margin-right: 200px;
+}
+
+#category-action {
+    margin-right: 0px;
+    margin-left: 180px;
+}

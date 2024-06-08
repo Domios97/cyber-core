@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+.available-badge{
+    width: 80px;
+    height: 25px;
+    background-color: rgba(172, 247, 177, 0.568);
+    border-radius: 5px;
+}
+
+.available-badge p {
+    width: 100%;
+    color: rgb(39, 187, 23);
+    font-size: 13px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}

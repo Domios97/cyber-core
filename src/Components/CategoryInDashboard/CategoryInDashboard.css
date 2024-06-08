@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
+.category-in-dashboard {
+    display: flex;
+    align-items: center;
+    margin: 10px auto 10px auto;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding:5px 10px;
+    background-color: #f7fafc;
+    border-radius: 15px;
+}
+
+.category-in-dashboard:hover {
+    background-color: #ecf0f4;
+}
+
+.category-in-dashboard img {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 6px;
+}
+
+.category-in-dashboard-info {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.category-in-dashboard-info p {
+    margin-right: 80px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 450;
+}
+#category-id {
+    margin-left: 30px;
+}
+.category-in-dashboard button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: #f7fafc;
+}
+
+.action-buttons button:hover {
+    background-color: #ecf0f4;
+}
+
+.modify-icon {
+    width: 25px;
+    height: 25px;
+    color: rgb(66, 171, 66);
+    margin-right: 10px;
+}
+
+.delete-icon {
+    width: 25px;
+    height: 25px;
+    color: rgb(214, 58, 58);
+    margin-right: 10px;
+}
