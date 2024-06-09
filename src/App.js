@@ -11,14 +11,15 @@ import ResetPasswordForm from './Pages/ResetPasswordForm/ResetPasswordForm';
 import ProductDetail from './Pages/ProductDetails/ProductDetail';
 import WishlistPage from './Pages/WishlistPage/WishlistPage';
 import AboutUs from './Pages/AboutUs/AboutUs';
-
+import ResetPasswordOne from './Pages/ResetPasswordOne/ResetPasswordOne';
+import ResetPasswordTwo from './Pages/ResetPasswordTwo/ResetPasswordTwo';
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
   const [isSignupFormVisible, setSignupFormVisible] = useState(false);
 
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password';
+  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password' || location.pathname === '/ResetPassword' || location.pathname === '/ResetPasswordTwo';
 
  
 
@@ -38,8 +39,12 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/product-detail" element={<ProductDetail />} />
+        <Route path="/ResetPassword" element={<ResetPasswordOne onClose={hideForms}/>}/>
+        <Route path="/ResetPasswordTwo" element={<ResetPasswordTwo onClose={hideForms}/>}/>
+
       </Routes>
-      <AboutUs/>
+
+    
 
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}

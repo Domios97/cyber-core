@@ -36,7 +36,7 @@ const LoginForm = () => {
             <input type="checkbox" id="check" />
             <label htmlFor="check">Remember me</label>
           </span>
-          <a href="/reset-password" className="forgot_pw">Forgot password?</a>
+          <a href="/ResetPassword" className="forgot_pw">Forgot password?</a>
         </div>
         <button className="button">Login Now</button>
         <div className="login_signup">Don't have an account? <Link to="/signup">Signup</Link></div>
