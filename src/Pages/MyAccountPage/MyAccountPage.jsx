@@ -1,6 +1,7 @@
 import React from 'react';
 import './MyAccountPage.css';
 import Order from '../../Components/Order/Order';
+import { FaEye, FaEyeSlash, FaBell, FaRegBell} from 'react-icons/fa';
 import { avatar, myorders, opentoside,exit, changepass } from '../../images';
 
 function MyAccountPage() {
@@ -8,6 +9,12 @@ function MyAccountPage() {
     <div>
         <div className="account-container">
             <div className="left-account-section">
+                <div className="fonctionnalities">
+                    <FaRegBell id='notification-icon'/>
+                    <a href="">
+                        <p>Notifications</p>
+                    </a>
+                </div>
                 <div className="fonctionnalities">
                     <img src={changepass} alt="" />
                     <a href="/reset-password">

@@ -50,6 +50,14 @@ a {
     margin-right: 20px;
 }
 
+#notification-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgba(255, 0, 0, 0.656);
+}
+
 .fonctionnalities:hover {
     border: 1px solid #6d77f6;
 }
