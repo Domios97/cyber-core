@@ -75,3 +75,35 @@
     width: calc(50% - 10px); /* Show 2 products per row on even smaller screens */
   }
 }
+/* App.css */
+
+.App {
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.category-filter {
+  flex: 0 0 260px;
+  margin-right: 20px;
+}
+
+.content-section {
+  flex: 1;
+}
+
+.search-filter-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-sort {
+  display: flex;
+  align-items: center;
+}
