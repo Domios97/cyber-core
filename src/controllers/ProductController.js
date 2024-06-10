@@ -24,27 +24,29 @@ class ProductController{
    }
 
    static async create(product = {}, catigoryId){
-
     var userInfo = await Auth.me();
     var userToken = Auth.isLogedIn();
     var userId = userInfo.data.id;
+
+    var  formData = new FormData(); 
+    formData.append("admin_id", userId);
+    formData.append("token", userToken);
+    formData.append("color", product.color);
+    formData.append("price", product.price);
+    formData.append("description", product.description);
+    formData.append("contete", product.contete);
+    formData.append("catigory_id", catigoryId);
+    formData.append("name", product.name);
+    for(var index = 0 ; index< product.images.length; index++){
+        formData.append(`images[${index+1}]`, product.images[0]);
+    }
     var response = await fetch(ApiRequestGenerator.generateUrl("product/create"), {
         method: "post",
         headers: {
             "Accept": "application/json",
-            "Content-Type": "application/json" 
+            // "Content-Type": "application/json", 
         },
-        body : JSON.stringify({
-           "admin_id" : userId , 
-           "token": userToken,
-           "color" : product.color, 
-           "price" : product.price, 
-           "description" : product.description, 
-           "contete" : product.contete, 
-           "catigory_id": catigoryId,
-           "name": product.name, 
-           "images[]": product.images
-        })
+        body : formData,
     });
     const responseBody = await response.json();
     return responseBody;
@@ -55,35 +57,37 @@ class ProductController{
     var userInfo = await Auth.me();
     var userToken = Auth.isLogedIn();
     var userId = userInfo.data.id;
+    var  formData = new FormData(); 
+    formData.append("admin_id", userId);
+    formData.append("token", userToken);
+    formData.append("color", product.color);
+    formData.append("price", product.price);
+    formData.append("description", product.description);
+    formData.append("contete", product.contete);
+    formData.append("catigory_id", catigoryId);
+    formData.append("name", product.name);
+    formData.append("product_id", product.id);
+    for(var index = 0 ; index< product.images.length; index++){
+        formData.append(`images[${index+1}]`, product.images[0]);
+    }
     var response = await fetch(ApiRequestGenerator.generateUrl("product/update"), {
         method: "post",
         headers: {
             "Accept": "application/json",
-            "Content-Type": "application/json" 
+            // "Content-Type": "application/json" 
         },
-        body : JSON.stringify({
-           "admin_id" : userId , 
-           "token": userToken,
-           "color" : product.color, 
-           "price" : product.price, 
-           "description" : product.description, 
-           "contete" : product.contete, 
-           "catigory_id": catigoryId,
-           "name": product.name, 
-           "images[]" : product.images,
-           "product_id": product.id,
-        })
+        body : formData
     });
     const responseBody = await response.json();
     return responseBody;
    }
 
-   async delete (){
+   static async delete (productId){
     
     var userInfo = await Auth.me();
     var userToken = Auth.isLogedIn();
     var userId = userInfo.data.id;
-    var response = await fetch(ApiRequestGenerator.generateUrl("product/delete/"+userId), {
+    var response = await fetch(ApiRequestGenerator.generateUrl("product/delete/"+productId), {
         method: "post",
         headers: {
             "Accept": "application/json",

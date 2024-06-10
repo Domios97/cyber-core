@@ -82,7 +82,7 @@ textarea {
   margin: 0 0 10px 0;
 }
 
-.modify-product-form-container button {
+.modify-product-form-container form >  button:last-of-type {
   color: #6d77f6;
   padding: 10px 20px;
   font-size: 18px;
@@ -95,7 +95,7 @@ textarea {
   background-color: #f7fafc;
 }
 
-.modify-product-form-container button:hover {
+.modify-product-form-container form > button:hover {
   background-color: #6d77f6;
   color: white;
   transition: 0.2s;

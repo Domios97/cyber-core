@@ -11,7 +11,7 @@ import DashboardCategoryDisplay from '../../Components/DashboardCategoryDisplay/
 import DashboardOrdersDisplay from '../../Components/DashboardOrdersDisplay/DashboardOrdersDisplay';
 
 function AdminDashboard() {
-  const [activeComponent, setActiveComponent] = useState('category');
+  const [activeComponent, setActiveComponent] = useState('product');
 
   const handleManageProductsClick = () => {
     setActiveComponent('product');

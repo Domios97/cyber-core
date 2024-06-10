@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './DashboardCategoryDisplay.css';
 import CategoryInDashboard from '../CategoryInDashboard/CategoryInDashboard';
 import AddCategoryForm from '../AddCategoryForm/AddCategoryForm';
+import { CatigoryContext } from '../../Contexts/CatigoryProvider';
 
 function DashboardCategoryDisplay() {
   const [showForm, setShowForm] = useState(false);
+  const {catigorys, setCatigorys} = useContext(CatigoryContext);
 
   const handleAddNewClick = () => {
     setShowForm(true);
@@ -14,7 +16,9 @@ function DashboardCategoryDisplay() {
     <div>
       <div className="category-display-container">
         {showForm ? (
-          <AddCategoryForm />
+          <AddCategoryForm onCreate={()=>{
+            setShowForm(false);
+          }}/>
         ) : (
           <>
             <div className="category-section-heading">
@@ -27,13 +31,9 @@ function DashboardCategoryDisplay() {
               <p>Category ID</p>
               <p id='category-action'>Action</p>
             </div>
-            <CategoryInDashboard />
-            <CategoryInDashboard />
-            <CategoryInDashboard />
-            <CategoryInDashboard />
-            <CategoryInDashboard />
-            <CategoryInDashboard />
-            <CategoryInDashboard />
+            {catigorys && catigorys.map((catigory)=>{
+               return <CategoryInDashboard catigoryInfo={catigory} />
+            })}
           </>
         )}
       </div>

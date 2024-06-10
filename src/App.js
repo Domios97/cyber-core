@@ -21,6 +21,8 @@ import AuthenticateContext from "./Contexts/AuthenticateContext";
 import ProductCart from "./Components/OneProduct/ProductCart";
 import CartProvider from "./Contexts/CartProvider";
 import FavoriteProvider from "./Contexts/FavoriteProvider";
+import CatigoryProvider from "./Contexts/CatigoryProvider";
+import ProductProvider from "./Contexts/ProductProvider";
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -30,8 +32,9 @@ const App = () => {
   const hideNavAndFooter =
     location.pathname === "/login" ||
     location.pathname === "/signup" ||
-    location.pathname === "/reset-password";
-
+    location.pathname === "/reset-password"||
+    location.pathname === "/admin/dashboard";
+    
   const hideForms = () => {
     setLoginFormVisible(false);
     setSignupFormVisible(false);
@@ -57,11 +60,18 @@ const App = () => {
             />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wishlist" element={<WishlistPage />} />
-
             <Route
               path="/product-detail/:productId"
               element={<ProductDetail />}
             />
+              <Route path="/admin/dashboard" 
+              element={
+                <ProductProvider>
+                  <CatigoryProvider>
+                    <AdminDashbord />
+                  </CatigoryProvider>
+                </ProductProvider>
+              }/>
           </Routes>
           {!hideNavAndFooter && <SiteFooter />}
           {isLoginFormVisible && <LoginForm onClose={hideForms} />}
