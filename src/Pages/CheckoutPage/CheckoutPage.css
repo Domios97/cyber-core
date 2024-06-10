@@ -1,0 +1,85 @@
+/* src/Pages/CheckoutPage.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.checkout-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;  /* Ensure the container takes full viewport height */
+  background-color: #f9f9f9;
+}
+
+.checkout-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row .input-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.form-row .input-icon:last-child {
+  margin-right: 0;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.checkout-form button {
+  padding: 9px;
+  background-color: #5f28a7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
