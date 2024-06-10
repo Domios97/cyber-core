@@ -13,6 +13,7 @@ import WishlistPage from './Pages/WishlistPage/WishlistPage';
 import MyAccountPage from './Pages/MyAccountPage/MyAccountPage';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
 import AdminDashboard from './Pages/AdminDashbordPage/AdminDashbord'
+import AboutUs from './Pages/AboutUs/AboutUs';
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/account" element={<MyAccountPage />} />
         <Route path="/dashboard" element={<AdminDashboard />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
       {!hideNavAndFooter && <SiteFooter />}
       {isLoginFormVisible && <LoginForm onClose={hideForms} />}

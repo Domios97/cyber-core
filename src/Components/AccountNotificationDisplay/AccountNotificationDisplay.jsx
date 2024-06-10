@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AccountNotificationDisplay.css';
+import { FaRegBell } from "react-icons/fa";
 import Notification from '../../Components/Notification/Notification';
 
 function AccountNotificationDisplay() {
@@ -14,18 +15,30 @@ function AccountNotificationDisplay() {
 
   return (
     <div className="account-notification-display-container">
-      {notifications.map(notification => (
-        <Notification
-          key={notification.id}
-          id={notification.id}
-          title={notification.title}
-          message={notification.message}
-          time={notification.time}
-          removeNotification={removeNotification}
-        />
-      ))}
+      <div className="my-notifications">
+          <FaRegBell id='notif-icon'/>
+          <p>Your Notifications</p>
+      </div>
+      {notifications.length === 0 ? (
+        <p className='no-notif-message'>You have no notifications yet.</p>
+      ) : (
+        notifications.map(notification => (
+          <Notification
+            key={notification.id}
+            id={notification.id}
+            title={notification.title}
+            message={notification.message}
+            time={notification.time}
+            removeNotification={removeNotification}
+          />
+        ))
+      )}
     </div>
   );
 }
 
 export default AccountNotificationDisplay;
+
+
+
+

@@ -36,3 +36,11 @@ a {
     font-weight: 550;
     margin-bottom: 30px;
 }
+
+.no-notif-message {
+    width: 70%;
+    margin: 70px auto;
+    font-size: 62px;
+    font-weight: 500;
+    opacity: 0.2;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Notification.css';
 import { sitelogo } from '../../images';
+import { IoMdCloseCircle } from "react-icons/io";
 
 function Notification({ id, title, message, time, removeNotification }) {
   return (
@@ -11,10 +12,12 @@ function Notification({ id, title, message, time, removeNotification }) {
           <p id='notif-title'>{title} -<span>{time}</span></p>
           <p>{message}</p>
         </div>
-        <button type='button' id='remove-notif' onClick={() => removeNotification(id)}>Remove</button>
+        <IoMdCloseCircle id='remove-notif' onClick={() => removeNotification(id)}/>
       </div>
     </div>
   );
 }
 
 export default Notification;
+
+

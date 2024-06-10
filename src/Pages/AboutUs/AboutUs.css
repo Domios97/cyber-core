@@ -1,0 +1,98 @@
+.about-us {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  .about-us-hero-section {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem; 
+    margin: 0;
+    padding-top: 4%;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 0 2rem; /* Padding for better readability */
+  }
+  
+  .section {
+    padding: 1rem;
+  }
+  
+  .section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section p, .section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .values ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .values li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 50vh;
+    }
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .section h3 {
+      font-size: 1.5rem;
+    }
+  
+    .section p, .section ul {
+      font-size: 0.9rem;
+    }
+  
+    .about-content {
+      padding: 0 1rem;
+    }
+  }
+  
