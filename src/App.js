@@ -49,6 +49,7 @@ const App = () => {
           {!hideNavAndFooter && <Navbar />}
           <Cart />
           <Routes>
+           
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginForm onClose={hideForms} />} />
             <Route

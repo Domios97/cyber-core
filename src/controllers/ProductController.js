@@ -37,8 +37,8 @@ class ProductController{
     formData.append("contete", product.contete);
     formData.append("catigory_id", catigoryId);
     formData.append("name", product.name);
-    for(var index = 0 ; index< product.images.length; index++){
-        formData.append(`images[${index+1}]`, product.images[0]);
+    for(var index = 0 ; index < product.images.length; index++){
+        formData.append(`images[${index+1}]`, product.images[index]);
     }
     var response = await fetch(ApiRequestGenerator.generateUrl("product/create"), {
         method: "post",
