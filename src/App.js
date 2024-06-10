@@ -23,6 +23,7 @@ import CartProvider from "./Contexts/CartProvider";
 import FavoriteProvider from "./Contexts/FavoriteProvider";
 import CatigoryProvider from "./Contexts/CatigoryProvider";
 import ProductProvider from "./Contexts/ProductProvider";
+import OrderProvider from "./Contexts/OrderProvider";
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -66,11 +67,13 @@ const App = () => {
             />
               <Route path="/admin/dashboard" 
               element={
-                <ProductProvider>
-                  <CatigoryProvider>
-                    <AdminDashbord />
-                  </CatigoryProvider>
+                <OrderProvider>
+                  <ProductProvider>
+                    <CatigoryProvider>
+                      <AdminDashbord />
+                    </CatigoryProvider>
                 </ProductProvider>
+                </OrderProvider>
               }/>
           </Routes>
           {!hideNavAndFooter && <SiteFooter />}

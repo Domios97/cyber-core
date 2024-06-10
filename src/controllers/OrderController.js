@@ -52,6 +52,21 @@ class OrderController {
         }
         return filtredProduct;
     }
+
+    static async getAll(){
+
+        var userToken = Auth.isLogedIn();
+
+        var response = await fetch(ApiRequestGenerator.generateUrl("order/all?token="+userToken), {
+            method: "get",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json" 
+            },
+        });
+        const responseBody = await response.json();
+        return responseBody;
+    }
 }
 
 export default OrderController;
