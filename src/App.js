@@ -12,13 +12,14 @@ import ProductDetail from './Pages/ProductDetails/ProductDetail';
 import WishlistPage from './Pages/WishlistPage/WishlistPage';
 import MyAccountPage from './Pages/MyAccountPage/MyAccountPage';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
+import AdminDashboard from './Pages/AdminDashbordPage/AdminDashbord'
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
   const [isSignupFormVisible, setSignupFormVisible] = useState(false);
 
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password';
+  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password' || location.pathname === '/dashboard';
 
  
 
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/product-detail" element={<ProductDetail />} />
         <Route path="/account" element={<MyAccountPage />} />
+        <Route path="/dashboard" element={<AdminDashboard />} />
         <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
       {!hideNavAndFooter && <SiteFooter />}

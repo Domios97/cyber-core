@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    height: 680px;
+    width: 100%;
+    display: flex;
+    background-color: #ecf0f4;
+}
+
+.dashboard-left-side {
+    position: relative;
+    padding: 10px;
+    width: 25%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+    background-color: #f7fafc;
+}
+
+.logo-part {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-part img {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.logo-part span {
+    font-size: 22px;
+    font-family: 'Alata';
+    font-weight: 600;
+}
+
+.dashboard-functionalities {
+    margin-top: 40px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.dashboard-functionalities-parts {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+    background-color: aliceblue;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dashboard-functionalities-parts:hover {
+    color: #6d77f6;
+    border: 1px solid #6d77f6;
+    transition: 0.1s;
+}
+
+.dashboard-functionalities-parts span {
+    font-size: 18px;
+    font-family: 'Alata';
+    font-weight: 450;
+}
+
+.dashboard-icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.dashboard-right-arrows {
+    position: absolute;
+    top: 23%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+.admin-logout {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 88%;
+    height: 60px;
+    background-color: aliceblue;
+    cursor: pointer;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+.admin-logout:hover {
+    color: #6d77f6;
+    border: 1px solid #6d77f6;
+    transition: 0.1s;
+}
+
+.admin-logout span {
+    font-size: 18px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+}
+
+.admin-logout-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: #f7fafc;
+    padding: 30px auto 0 auto;
+    border-radius: 10px;
+}
+
+.dashboard-right-side {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.dashboard-right-side #admin-dashboard {
+    font-size: 32px;
+    font-family: 'Alata', sans-serif;
+    width: 100%;
+    text-align: center;
+    color: #252525;
+   
+}
+
+.dashboard-item-display-section {
+    width: 100%;
+    height: 590px;
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+}

@@ -1,56 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MyAccountPage.css';
-import Order from '../../Components/Order/Order';
-import { FaEye, FaEyeSlash, FaBell, FaRegBell} from 'react-icons/fa';
-import { avatar, myorders, opentoside,exit, changepass } from '../../images';
+import AccountOrder from '../../Components/AccountOrder/AccountOrder';
+import { FaRegBell } from 'react-icons/fa';
+import { RiShoppingBasketLine } from "react-icons/ri";
+import { MdLockReset } from "react-icons/md";
+import { TbLogout2 } from "react-icons/tb";
+import { avatar } from '../../images';
+import AccountOrdersDisplay from '../../Components/AccountOrdersDisplay/AccountOrdersDisplay';
+import AccountNotificationDisplay from '../../Components/AccountNotificationDisplay/AccountNotificationDisplay';
 
 function MyAccountPage() {
+  const [activeSection, setActiveSection] = useState('orders');
+
   return (
     <div>
-        <div className="account-container">
-            <div className="left-account-section">
-                <div className="fonctionnalities">
-                    <FaRegBell id='notification-icon'/>
-                    <a href="">
-                        <p>Notifications</p>
-                    </a>
-                </div>
-                <div className="fonctionnalities">
-                    <img src={changepass} alt="" />
-                    <a href="/reset-password">
-                        <p>Reset Password</p>
-                    </a>
-                </div>
-                <div className="fonctionnalities">
-                    <img src={exit} alt="" />
-                    <p>Log Out</p>
-                </div>
-            </div>
-            <div className="right-account-container">
-                <div className="personal-info">
-                    <div className="photo">
-                        <img src={avatar} alt="" />
-                    </div>
-                    <div className="hello-email">
-                        <h4>username@gmail.com</h4>
-                        <p>ID: 08754346</p>
-                    </div>
-                </div>
-                <hr />
-                <div className="my-orders">
-                    <img src={myorders} alt="" />
-                    <p>Your Orders</p>
-                </div>
-                <div className="orders-section">
-                    <Order />
-                    <Order />
-                    <Order />
-                </div>
-            </div>
-
+      <div className="account-container">
+        <div className="left-account-section">
+          <div className="fonctionnalities" onClick={() => setActiveSection('orders')}>
+            <RiShoppingBasketLine id='account-left-icons'/>
+            <p>View Orders</p>
+          </div>
+          <div className="fonctionnalities" onClick={() => setActiveSection('notifications')}>
+            <FaRegBell id='account-left-icons'/>
+            <p>Notifications</p>
+            <span>1</span>
+          </div>
+          <div className="fonctionnalities">
+            <MdLockReset id='account-left-icons'/>
+            <a href="/reset-password">
+              <p>Reset Password</p>
+            </a>
+          </div>
+          <div className="fonctionnalities">
+            <TbLogout2 id='account-left-icons'/>
+            <p>Log Out</p>
+          </div>
         </div>
+        <div className="right-account-container">
+          <div className="personal-info">
+            <div className="photo">
+              <img src={avatar} alt="" />
+            </div>
+            <div className="hello-email">
+              <h4>username@gmail.com</h4>
+              <p>ID: 08754346</p>
+            </div>
+          </div>
+          <hr />
+          <div className="content-section">
+            {activeSection === 'orders' && <AccountOrdersDisplay />}
+            {activeSection === 'notifications' && <AccountNotificationDisplay />}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default MyAccountPage
+export default MyAccountPage;

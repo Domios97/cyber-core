@@ -13,8 +13,8 @@ function Order() {
                     <p>Date: 15/02/2022</p>
                 </div>
                 <div className="cancel-done">
-                    <button id='delete-order'>Delete</button>
-                    <button id='recived-order'>Recived</button>
+                    <button id='delete-order'>Cancel</button>
+                    <button id='recived-order'>Confirm</button>
                 </div>
             </div>
             <hr />
@@ -25,12 +25,12 @@ function Order() {
                     <p>Phone Number: </p>
                     <p>Email: </p>
                 </div>
-                <hr />
+                <hr id='vertical-separator'/>
                 <div className="one-order-info">
                     <h4>Contact</h4>
                     <p>Adress: </p>
                 </div>
-                <hr />
+                <hr id='vertical-separator'/>
                 <div className="one-order-info">
                     <h4>Payment</h4>
                     <p>Cash onDelivery</p>
