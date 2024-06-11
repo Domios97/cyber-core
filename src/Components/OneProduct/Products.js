@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProductCart from './ProductCart';
+import './Products.css';
 
 function Products({ products }) {
   return (

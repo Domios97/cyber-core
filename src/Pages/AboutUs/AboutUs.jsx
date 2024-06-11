@@ -40,10 +40,6 @@ const AboutUs = () => {
             <h3>Meet Our team</h3>
             <p>Our team is made up of passionate professionals who are dedicated to helping you find the perfect technology solutions.</p>
           </div>
-          <div className="section testimonials">
-            <h3>What our Clients Think About Us</h3>
-            <p>"CyberCore is my go-to for all my IT needs. Their products are top-notch and their customer service is exceptional!" - Satisfied customer</p>
-          </div>
         </section>
       </div>
     );

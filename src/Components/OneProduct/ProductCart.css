@@ -27,16 +27,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* .product-cart:hover .add-to-cart {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.product-cart:hover .wishlist-button {
-    top: 3%;
-    opacity: 1;
-} */
-
 .product-cart img {
     height: 100px;
     object-fit: contain;

@@ -4,7 +4,7 @@ import './ShopNowButton.css';
 function ShopNowButton() {
   return (
     <div>
-       <button type='' onClick='' class="shopnow-button" role="button">Shop Now </button>
+       <a href="/shop"><button type='' class="shopnow-button" role="button">Shop Now </button></a>
     </div>
   )
 }

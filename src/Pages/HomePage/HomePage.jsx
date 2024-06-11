@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { wallpaper, FreeDelivery, cashDelivery, fastDelivery, headset,LeftArrow, rightArrow } from '../../images';
+import { wallpaper, FreeDelivery, cashDelivery, fastDelivery, headset,LeftArrow, rightArrow,dellUnit,harddrive,mackbookpro,clavier,kaspersky, avast, desktop, gpu, router } from '../../images';
 import './HomePage.css';
 import CatgorieCarousel from '../../Components/CategoryCarousel/CategorieCarousel';
 import Promotion from '../../Components/OnePromotion/Promotion';
@@ -11,108 +11,87 @@ import ViewAllButton from '../../Components/ViewAllButton/ViewAllButton';
 const products = [
   {
     id: 1,
-    image: headset,
-    title: 'Pc',
+    image: router,
+    title: 'Router',
     price: 400,
-    category: 'Electronics'
+    category: 'Networking',
   },
   {
     id: 2,
     image: headset,
-    title: 'Router',
+    title: 'headset',
     price: 300,
-    category: 'Phones'
+    category: 'Peripherals',
   },
   {
     id: 3,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus desktop',
+    price: 2000,
+    category: 'PreBuiltPC',
   },
   {
     id: 4,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: kaspersky,
+    title: 'Kaspersky',
+    price: 310,
+    category: 'Software',
   },
   {
     id: 5,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: gpu,
+    title: 'gpu',
+    price: 250,
+    category: 'Components',
   },
   {
     id: 6,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus desktop',
+    price: 600,
+    category: 'PreBuiltPC',
   },
   {
     id: 7,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: harddrive,
+    title: 'Hard Drive',
+    price: 20,
+    category: 'Components',
   },
   {
     id: 8,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: dellUnit,
+    title: 'asus desktop',
+    price: 90,
+    category: 'PreBuiltPC',
   },
   {
     id: 9,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: avast,
+    title: 'Avast Antivirus',
+    price: 600,
+    category: 'Software',
   },
   {
     id: 10,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus desktop',
+    price: 8200,
+    category: 'PreBuiltPC',
   },
   {
     id: 11,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: mackbookpro,
+    title: 'asus desktop',
+    price: 8200,
+    category: 'PreBuiltPC',
   },
   {
     id: 12,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 13,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 14,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 15,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: clavier,
+    title: 'Claver',
+    price: 8200,
+    category: 'Peripherals',
   },
 ];
 

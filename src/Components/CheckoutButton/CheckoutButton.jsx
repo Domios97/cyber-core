@@ -6,7 +6,7 @@ function CheckoutButton() {
   return (
     <div>
       <div className="proceed-checkout">
-        <button type='' onClick="">Proceed To checkout</button>
+        <a href="/checkout"><button type=''>Proceed To checkout</button></a>
         <img src={checkout} alt="" />
       </div>
     </div>

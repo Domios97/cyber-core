@@ -12,6 +12,14 @@
   color: #252525;
 }
 
+.products-grid-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
 
 
 

@@ -41,8 +41,16 @@ import opentoside from './opentoside.png';
 import exit from './exit.png';
 import changepass from './changepass.png';
 import avatar from './avatar.png';
+import dellUnit from './dellUnit.jpeg';
+import mackbookpro from './macbookpro.jpeg';
+import clavier from './clavier.jpeg';
+import avast from './avast.webp';
 
 export {
+  dellUnit,
+  mackbookpro,
+  avast,
+  clavier,
   myorders,
   avatar,
   opentoside,

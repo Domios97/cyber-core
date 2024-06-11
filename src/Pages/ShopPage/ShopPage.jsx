@@ -8,14 +8,12 @@ import '../ShopPage/ShopPage.css';
 
 const categories = {
   All: [],
-  Electronics: [],
-  Phones: [],
-  Tablets: [],
+  Components: [],
+  Accessories: [],
   Peripherals:[],
   Networking: [],
   PreBuiltPC: [],
   Software: [],
-  Components: []
 };
 
 function useQuery() {
@@ -69,9 +67,6 @@ function ShopPage() {
 
   return (
     <div>
-      <div>
-        <h1 className='product-display'>Product Display</h1>
-      </div>
       <div className="main-content">
         <CategoryFilter
           categories={categories}
@@ -83,7 +78,9 @@ function ShopPage() {
             <FilterSort onFilterSort={handleFilterSort} />
           </div>
           <div className='shop-products-container'>
-            <Products products={filteredProducts} />
+            <div className="products-grid-container">
+              <Products products={filteredProducts} />
+            </div>
           </div>
         </div>
       </div>

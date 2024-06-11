@@ -5,10 +5,10 @@ import { ViewAllArrow } from '../../images';
 
 const ViewAllButton = ({ onViewAll }) => {
   return (
-    <button className="view-all-button" onClick={onViewAll}>
-      View All
-      <img src={ViewAllArrow}/>
-    </button>
+    <a href='/shop'><button className="view-all-button" onClick={onViewAll}>
+    View All
+    <img src={ViewAllArrow}/>
+  </button></a>
   );
 };
 
