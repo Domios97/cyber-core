@@ -26,6 +26,7 @@ import ProductProvider from "./Contexts/ProductProvider";
 import OrderProvider from "./Contexts/OrderProvider";
 import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 
+
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
   const [isSignupFormVisible, setSignupFormVisible] = useState(false);

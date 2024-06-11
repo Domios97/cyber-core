@@ -63,6 +63,48 @@ class OrderController {
         const responseBody = await response.json();
         return responseBody;
     }
+    
+    static async accept(userId, orderId){
+
+        var userToken = Auth.isLogedIn();
+
+        var response = await fetch(ApiRequestGenerator.generateUrl("order/accept"), {
+            method: "post",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json" 
+            },
+            body:JSON.stringify({
+               "token":userToken, 
+               "user_id": userId, 
+               "order_id": orderId, 
+            })        
+        });
+        const responseBody = await response.json();
+        return responseBody;
+    }
+    static async reject(userId, orderId){
+
+        var userToken = Auth.isLogedIn();
+
+        var response = await fetch(ApiRequestGenerator.generateUrl("order/reject"), {
+            method: "post",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json" 
+            },
+            body: JSON.stringify({
+               "token":userToken, 
+               "user_id": userId, 
+               "order_id": orderId, 
+            })
+        });
+        const responseBody = await response.json();
+        return responseBody;
+    }
+
+
+    
 }
 
 export default OrderController;

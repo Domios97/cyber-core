@@ -32,7 +32,7 @@ function DashboardCategoryDisplay() {
               <p id='category-action'>Action</p>
             </div>
             {catigorys && catigorys.map((catigory)=>{
-               return <CategoryInDashboard catigoryInfo={catigory} />
+               return <CategoryInDashboard key = {catigory.id} catigoryInfo={catigory} />
             })}
           </>
         )}

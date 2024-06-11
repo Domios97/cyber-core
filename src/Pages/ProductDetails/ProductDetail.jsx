@@ -32,7 +32,8 @@ function ProductDetails() {
             <div>
               {product.images.map((image) => {
                 return (
-                  <img
+                  <img 
+                    key = {image.id}
                     src={image.image_path}
                     onClick={() => {
                       setSelectedImagePath(image.image_path);

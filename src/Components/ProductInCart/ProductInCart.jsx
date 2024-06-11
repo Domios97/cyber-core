@@ -60,7 +60,7 @@ function ProductInCart(props) {
                 <div onClick = {async (e)=>{
                   e.preventDefault();
                    setDisplayToggle(false);
-                  cartItems .data.splice(props.index, 1);
+                  cartItems.data.splice(props.index, 1);
                   setCartItems(cartItems);
                   await CartController.deleteFromCart(product.id);
                 }}>

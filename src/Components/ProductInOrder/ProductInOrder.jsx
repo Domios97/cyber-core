@@ -4,7 +4,6 @@ import {router} from '../../images';
 
 
 function ProductInOrder({product}) {
-  console.log(product);
   return (
     <div>
         <div className="product-in-order-container">

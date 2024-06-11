@@ -47,7 +47,7 @@ function DashboardProductDisplay() {
               <p>Action</p>
             </div>
             {allProducts && allProducts.map((product, productIndex)=>{
-              return <ProductsInDashboard onModifyClick ={handleModifyClick} product = {product}  />
+              return <ProductsInDashboard onModifyClick ={handleModifyClick} product = {product} key ={product.id}  />
             })}
           </>
         )}

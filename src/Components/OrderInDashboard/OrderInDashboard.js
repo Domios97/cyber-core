@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import ProductInOrder from '../ProductInOrder/ProductInOrder';
+import { BiSolidCheckCircle } from 'react-icons/bi';
+import OrderController from '../../controllers/OrderController';
+import { OrderContext } from '../../Contexts/OrderProvider';
 
-function OrderInDashboard({order}) {
+function OrderInDashboard({order, index}) {
+    const {allOrders, setAllOrders} = useContext(OrderContext);
+    const [orderAccepted, setOrderAccepted] = useState(order.accepted);
+    const [orderDisplay, setOrderDisplay] = useState(true);
 
     const getDateFromTimestemp = (createdAt)=>{
         var year = parseInt(createdAt.substring(0, 4));
@@ -13,15 +19,30 @@ function OrderInDashboard({order}) {
     }
   return (
     <div>
-    <div className="order-container">
+    <div className="order-container" style = {{display : !orderDisplay && "none" }}>
         <div className="top-part">
             <div className="order-id-date">
                 <h4>Order ID: {order.id}</h4>
                 <p>Date: {getDateFromTimestemp(order.created_at)}</p>
             </div>
             <div className="cancel-done">
-                <button id='delete-order'>Reject</button>
-                <button id='recived-order'>Confirm</button>
+                <button id='delete-order' onClick={async(e)=>{
+                  e.preventDefault(); 
+                  var response = await OrderController.reject(order.user_id, order.id);
+                  if( response.status_code === 202 ){
+                    setOrderDisplay(false)
+                    allOrders.splice(index, 1);
+                  }
+                }}>Reject</button>
+                {orderAccepted === 0 ? 
+                <button id='recived-order' onClick={async(e)=>{
+                    e.preventDefault(); 
+                    var response = await OrderController.accept(order.user_id, order.id);
+                    if( response.status_code === 202 ){
+                      setOrderAccepted(true);
+                    }
+                  }}>Confirm</button>: 
+                <BiSolidCheckCircle className= "checked-order-icon"/> }
             </div>
         </div>
         <hr />
