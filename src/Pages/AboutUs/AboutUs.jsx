@@ -1,6 +1,6 @@
 import React from 'react';
 import '../AboutUs/AboutUs.css'
-import heroImage from '../../images/wallpaper.jpeg'; // Make sure to update the path to your image
+import heroImage from '../../images/wallpaper.jpeg'; 
 
 const AboutUs = () => {
     return (
@@ -8,22 +8,22 @@ const AboutUs = () => {
         <section className="about-us-hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
           <div className="overlay">
             <div className="hero-content">
-              <h1>Apprendre a nous connaitre</h1>
+              <h1>get to know us</h1>
             </div>
           </div>
         </section>
         <section className="about-content">
           <div className="section purpose">
-            <h3>Notre but:</h3>
-            <p>Chez CyberCore, nous pensons que chaque passionné de technologie mérite les meilleurs composants et accessoires informatiques. Notre objectif est de fournir des produits de haute qualité qui permettent à nos clients d'atteindre leurs objectifs technologiques et de garder une longueur d'avance dans un monde technologique en évolution rapide.</p>
+            <h3>Our Purpose</h3>
+            <p>At CyberCore, we believe that every technology enthusiast deserves the best computer components and accessories. Our goal is to provide high-quality products that enable our customers to achieve their technology goals and stay ahead in a rapidly changing technological world.</p>
           </div>
           <div className="section vision">
-            <h3>Notre vision:</h3>
-            <p>Nous envisageons un monde dans lequel la technologie s’intègre parfaitement à tous les aspects de la vie, améliorant ainsi la productivité et l’innovation. Notre objectif est de devenir le principal fournisseur de composants et d'accessoires informatiques, connu pour notre service client exceptionnel et notre engagement envers l'excellence.</p>
+            <h3>Our vision:</h3>
+            <p>We envision a world in which technology seamlessly integrates into every aspect of life, improving productivity and innovation. Our goal is to become the leading supplier of computer components and accessories, known for our exceptional customer service and commitment to excellence.</p>
           </div>
           <div className="section mission">
-            <h3>Notre mission:</h3>
-            <p>Notre mission est de fournir des produits et accessoires informatiques de premier ordre qui répondent aux normes de qualité et de performance les plus élevées. Nous nous engageons à offrir une expérience d'achat inégalée, du moment où vous visitez notre site Web jusqu'au moment où vos produits arrivent à votre porte.</p>
+            <h3>Our mission:</h3>
+            <p>Our mission is to provide premier computer products and accessories that meet the highest standards of quality and performance. We are committed to providing an unparalleled shopping experience, from the moment you visit our website to the moment your products arrive at your doorstep.</p>
           </div>
           <div className="section values">
             <h3>Nos valeurs:</h3>
@@ -33,16 +33,16 @@ const AboutUs = () => {
             </ul>
           </div>
           <div className="section history">
-            <h3>Notre histoire:</h3>
-            <p>Fondée en 2024, CyberCore a débuté avec pour mission de fournir des produits informatiques de haute qualité aux passionnés de technologie et aux professionnels. Au fil des années, nous sommes devenus un nom de confiance dans l’industrie, connu pour notre large sélection de produits et notre service client exceptionnel.</p>
+            <h3>Our Story</h3>
+            <p>Founded in 2024, CyberCore started with the mission of providing high-quality IT products to technology enthusiasts and professionals. Over the years, we have become a trusted name in the industry, known for our wide product selection and exceptional customer service.</p>
           </div>
           <div className="section team">
-            <h3>Rencontrez notre équipe:</h3>
-            <p>Notre équipe est composée de professionnels passionnés qui se consacrent à vous aider à trouver les solutions technologiques parfaites.</p>
+            <h3>Meet Our team</h3>
+            <p>Our team is made up of passionate professionals who are dedicated to helping you find the perfect technology solutions.</p>
           </div>
           <div className="section testimonials">
-            <h3>Ce que disent nos clients :</h3>
-            <p>"CyberCore est ma référence pour tous mes besoins informatiques. Leurs produits sont de premier ordre et leur service client est exceptionnel !" - Client satisfait</p>
+            <h3>What our Clients Think About Us</h3>
+            <p>"CyberCore is my go-to for all my IT needs. Their products are top-notch and their customer service is exceptional!" - Satisfied customer</p>
           </div>
         </section>
       </div>

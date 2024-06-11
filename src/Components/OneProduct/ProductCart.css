@@ -91,3 +91,9 @@
     height: 80%;
     filter: drop-shadow(2px 2px 2px rgb(199, 199, 199));
 }
+
+.product-cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}

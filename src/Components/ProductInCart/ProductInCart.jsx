@@ -1,25 +1,21 @@
 import React from 'react';
 import './ProductInCart.css';
-import {router} from '../../images';
 import DeleteProdButt from '../../Components/DeleteProductButton/DeleteProdButt';
 import ProductQuantity from '../ProductQuantity/ProductQuantity';
 
-function ProductInCart() {
-    
+function ProductInCart({ productImage, productName, productPrice, totalPrice }) {
   return (
-    <div>
-         <div className="product-in-cart" id='product-delete'>
-                <img src={router} alt="" />
-                <div className="product-info">
-                    <p>Asus Router</p>
-                    <p>53 000 DA</p>
-                    <p>Total Price: </p>
-                </div>
-                <ProductQuantity/>
-                <DeleteProdButt />
-            </div>
+    <div className="product-in-cart" id="product-delete">
+      <img src={productImage} alt={productName} />
+      <div className="product-info">
+        <p>{productName}</p>
+        <p>{productPrice}</p>
+        <p>Total Price: {totalPrice}</p>
+      </div>
+      <ProductQuantity />
+      <DeleteProdButt />
     </div>
-  )
+  );
 }
 
-export default ProductInCart
+export default ProductInCart;

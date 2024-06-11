@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { CartProvider } from './Contexts/CartContext';
 import './App.css';
 import Navbar from './Components/NavBar/Navigbar';
 import SiteFooter from './Components/Footer/sitefooter';
@@ -12,18 +13,16 @@ import ProductDetail from './Pages/ProductDetails/ProductDetail';
 import WishlistPage from './Pages/WishlistPage/WishlistPage';
 import MyAccountPage from './Pages/MyAccountPage/MyAccountPage';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
-import AdminDashboard from './Pages/AdminDashbordPage/AdminDashbord'
+import AdminDashboard from './Pages/AdminDashbordPage/AdminDashbord';
 import AboutUs from './Pages/AboutUs/AboutUs';
-import Shop from './Pages/Shop/Shop';
+import ShopPage from './Pages/ShopPage/ShopPage'
 
-const App = () => {
+const AppContent = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
   const [isSignupFormVisible, setSignupFormVisible] = useState(false);
 
   const location = useLocation();
   const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/reset-password' || location.pathname === '/dashboard';
-
- 
 
   const hideForms = () => {
     setLoginFormVisible(false);
@@ -32,10 +31,10 @@ const App = () => {
 
   return (
     <div>
-      {!hideNavAndFooter && <Navbar/>}
+      {!hideNavAndFooter && <Navbar />}
       <Routes>
+        <Route path="/shop" element={<ShopPage />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<Shop />} />
         <Route path="/login" element={<LoginForm onClose={hideForms} />} />
         <Route path="/signup" element={<SignupForm onClose={hideForms} />} />
         <Route path="/reset-password" element={<ResetPasswordForm onClose={hideForms} />} />
@@ -54,10 +53,12 @@ const App = () => {
   );
 };
 
-const WrappedApp = () => (
+const App = () => (
   <Router>
-    <App />
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
   </Router>
 );
 
-export default WrappedApp;
+export default App;

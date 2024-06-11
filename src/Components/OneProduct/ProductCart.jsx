@@ -1,117 +1,68 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaHeart } from "react-icons/fa";
-import {headset} from '../../images';
+import { headset, router, desktop,kaspersky, gpu, asus } from '../../images';
 import './ProductCart.css';
 import { useNavigate } from 'react-router-dom';
 
-
-const product = [
+export const product = [
   {
     id: 1,
-    image: headset,
+    image: router,
     title: 'Pc',
     price: 400,
-    category: 'Electronics'
+    category: 'router'
   },
   {
     id: 2,
     image: headset,
-    title: 'Router',
+    title: 'headset',
     price: 300,
-    category: 'Phones'
+    category: 'Peripherals'
   },
   {
     id: 3,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus desktop',
+    price: 2000,
+    category: 'PreBuiltPC'
   },
   {
     id: 4,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: kaspersky,
+    title: 'Kaspersky',
+    price: 310,
+    category: 'Software'
   },
   {
     id: 5,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: gpu,
+    title: 'gpu',
+    price: 250,
+    category: 'Components'
   },
   {
     id: 6,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus desktop',
+    price: 600,
+    category: 'PreBuiltPC'
   },
   {
     id: 7,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus',
+    price: 20,
+    category: 'PreBuiltPC'
   },
   {
     id: 8,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
+    image: desktop,
+    title: 'asus desktop',
+    price: 8200,
+    category: 'PreBuiltPC'
   },
-  {
-    id: 9,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 10,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 11,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 12,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 13,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 14,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
-  {
-    id: 15,
-    image: headset,
-    title: 'Test',
-    price: 200,
-    category: 'Tablets'
-  },
+  
 ];
 
 function ProductCart({ product }) {

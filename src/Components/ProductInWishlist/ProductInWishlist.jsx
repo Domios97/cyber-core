@@ -1,25 +1,25 @@
+
 import React from 'react';
 import './ProductInWishlist.css';
-import {router} from '../../images';
 import AddCartButt from '../AddToCartButton/AddCartButt';
-import DeleteProdButt from '../../Components/DeleteProductButton/DeleteProdButt';
+import DeleteProdButt from '../DeleteProductButton/DeleteProdButt';
 
+function ProductInWishlist({ productImage, productName, productPrice, productId }) {
+  const product = { id: productId, productImage, productName, productPrice };
 
-function ProductInWishlist() {
   return (
     <div>
-        <div className="product-in-wishlist" id='product-delete'>
-                <img src={router} alt="" />
-                <div className="product-info-wishlist">
-                    <p>Asus Router</p>
-                    <p>53 000 DA</p>
-                </div>
-                <AddCartButt addCartStyle="product-wishlist"/>
-                <DeleteProdButt />
-            </div>
+      <div className="product-in-wishlist" id="product-delete">
+        <img src={productImage} alt={productName} />
+        <div className="product-info-wishlist">
+          <p>{productName}</p>
+          <p>{productPrice}</p>
+        </div>
+        <AddCartButt addCartStyle="product-wishlist" product={product} />
+        <DeleteProdButt />
+      </div>
     </div>
-  )
-};
+  );
+}
 
-
-export default ProductInWishlist
+export default ProductInWishlist;

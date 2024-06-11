@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="about-contact">
         <ul>
           <li><a href="/about-us">About Us</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="mailto:adamabderrahmani97@gmail.com">Contact</a></li>
         </ul>
       </div>
       <div className="right-nav">

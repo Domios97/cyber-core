@@ -1,0 +1,21 @@
+
+.content-section {
+  flex-grow: 1;
+  
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.product-display{
+  color: #252525;
+}
+
+
+
+
+
+
+
+
