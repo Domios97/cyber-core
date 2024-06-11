@@ -102,8 +102,36 @@ class OrderController {
         const responseBody = await response.json();
         return responseBody;
     }
+    static async cancelOrder(orderId){
 
+        var userToken = Auth.isLogedIn();
 
+        var response = await fetch(ApiRequestGenerator.generateUrl("order/cancel/"+orderId+"?token="+userToken), {
+            method: "get",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json" 
+            },
+        });
+        const responseBody = await response.json();
+        return responseBody;
+    }
+    static async getOrdersByUserId(){
+        
+        var userToken = Auth.isLogedIn();
+        var userInfo = await Auth.me();
+        const userId = userInfo.data.id;
+        var response = await fetch(ApiRequestGenerator.generateUrl("order/userOrders/"+userId+"?token="+userToken), {
+            method: "get",
+            headers: {
+                "Accept": "application/json",
+            },
+        });
+        const responseBody = await response.json();
+        return responseBody;
+    }
+
+    
     
 }
 

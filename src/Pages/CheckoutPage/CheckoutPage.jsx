@@ -109,7 +109,7 @@ function CheckoutPage() {
                     "phonNumber": phonNumber, 
                     "amount": amount
                   }
-                  if(!haveEmptyInput(customer)){
+                  if(!haveEmptyInput(customer) && cartItems.data.length > 0){
                     const response = await OrderController.placeOrder(cartItems.data, customer);
                     cartItems.data = [];
                     setCartItems(cartItems);

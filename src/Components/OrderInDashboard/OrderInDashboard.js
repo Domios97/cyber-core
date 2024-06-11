@@ -40,6 +40,7 @@ function OrderInDashboard({order, index}) {
                     var response = await OrderController.accept(order.user_id, order.id);
                     if( response.status_code === 202 ){
                       setOrderAccepted(true);
+                      console.log(response);
                     }
                   }}>Confirm</button>: 
                 <BiSolidCheckCircle className= "checked-order-icon"/> }

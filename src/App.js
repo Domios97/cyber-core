@@ -25,6 +25,9 @@ import CatigoryProvider from "./Contexts/CatigoryProvider";
 import ProductProvider from "./Contexts/ProductProvider";
 import OrderProvider from "./Contexts/OrderProvider";
 import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
+import MyAccountPage from "./Pages/MyAccountPage/MyAccountPage";
+import UserOrdersProvider from "./Contexts/UserOrdersProvider";
+import NotificationsProvider from "./Contexts/NotificationsProvider";
 
 
 const App = () => {
@@ -51,6 +54,12 @@ const App = () => {
           {!hideNavAndFooter && <Navbar />}
           <Cart />
           <Routes>
+            <Route path="/MyAccount" element={
+              <UserOrdersProvider>
+                <NotificationsProvider>
+                  <MyAccountPage />
+                </NotificationsProvider>
+              </UserOrdersProvider>} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginForm onClose={hideForms} />} />

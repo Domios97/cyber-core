@@ -43,3 +43,9 @@
    opacity : 0; 
    display: none;    
 }
+
+.grey-title-style {
+  color:grey;
+  font-size: 17px;
+  font-weight: 600;
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.account-container {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    padding: 0 50px;
+    background-color: #f8f9fa;
+    margin-top:70px ;
+}
+
+.left-account-section {
+    width: 28%;
+    height: fit-content;
+    padding: 10px 5px 0 5px;
+}
+
+.fonctionnalities {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fonctionnalities span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5%;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(229, 25, 25, 0.899);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.fonctionnalities p {
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    margin-bottom: 30px;
+}
+
+.fonctionnalities #account-left-icons {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fonctionnalities:hover {
+    border: 1px solid #6d77f6;
+    color: #6d77f6;
+}
+
+.fonctionnalities a:hover {
+    color: #6d77f6;
+}
+
+.right-account-container {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 5px 0 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.personal-info {
+    display: flex;
+}
+.hello-email {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hello-email p, h4 {
+    text-align: left;
+}
+.hello-email p {
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    margin: 7px;
+}
+
+.right-account-container hr {
+    height: 2px;
+    width: 95%;
+    margin: auto;
+    background-color: #d6d6d6;
+}
+
+.personal-info  img {
+    width: 80px;
+    height: 80px;
+}
+
+.orders-section {
+    overflow-y: scroll;
+    max-height: 400px;
+    height: 450px;
+}

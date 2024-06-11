@@ -53,7 +53,7 @@ const Navbar = () => {
           <span className="tooltiptext">Cart</span>
         </div>
         <div className="tooltip">
-          <a href="/login"><img src={account} alt="Account" /></a>
+          <a href="/MyAccount"><img src={account} alt="Account" /></a>
           <span className="tooltiptext">Account</span>
         </div>
       </div>

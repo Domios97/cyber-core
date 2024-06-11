@@ -6,7 +6,6 @@ import OrderInDashboard from '../OrderInDashboard/OrderInDashboard';
 
 function DashboardOrdersDisplay() {
   const {allOrders, setAllOrders} = useContext(OrderContext);
- console.log (allOrders);
   return (
     <div>
         <div className="orders-display-container">

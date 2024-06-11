@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.order-container {
+    width:95%;
+    margin: 10px auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    background-color: #f7fafc;
+}
+
+.top-part {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-id-date {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.order-id-date p {
+    margin-top: 10px;
+    font-weight: 550;
+}
+
+.cancel-done {
+    display: flex;
+}
+
+.cancel-done button {
+    border: none;
+    background-color: white;
+    width: 140px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#done-order {
+    border: none;
+    color: white;
+    background-color: slateblue;
+}
+
+.order-container hr {
+    background-color: #d6d6d6;
+    width: 100%;
+    margin: 0px  auto;
+}
+
+.order-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    height: 150px;
+    width: 100%;
+}
+
+.one-order-info {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+
+}
+
+.one-order-info p {
+    margin: 3px 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500px;
+}
+.one-order-info h4{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#vertical-separator {
+    height: 100%;
+    width: 2px;
+    background-color: grey;
+}
+
+.products-purchased-container {
+    margin-top: 20px;
+    width:100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
