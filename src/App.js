@@ -14,6 +14,7 @@ import MyAccountPage from './Pages/MyAccountPage/MyAccountPage';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
 import AdminDashboard from './Pages/AdminDashbordPage/AdminDashbord'
 import AboutUs from './Pages/AboutUs/AboutUs';
+import Shop from './Pages/Shop/Shop';
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -34,6 +35,7 @@ const App = () => {
       {!hideNavAndFooter && <Navbar/>}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/login" element={<LoginForm onClose={hideForms} />} />
         <Route path="/signup" element={<SignupForm onClose={hideForms} />} />
         <Route path="/reset-password" element={<ResetPasswordForm onClose={hideForms} />} />

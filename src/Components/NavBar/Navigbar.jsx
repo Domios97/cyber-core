@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
         </a>
         <div className="home-shop tooltip">
-          <img src={shop} alt="Shop" />
+          <a href="/shop"><img src={shop} alt="Shop" /></a>
           <span className="tooltiptext">Shop</span>
         </div>
       </div>
@@ -37,15 +37,15 @@ const Navbar = () => {
       </div>
       <div className="right-nav">
         <div className="tooltip">
-          <img src={favori} alt="Wishlist" />
+          <a href="/wishlist"><img src={favori} alt="Wishlist" /></a>
           <span className="tooltiptext">Wishlist</span>
         </div>
         <div className="tooltip">
-          <img src={panier} alt="Cart" />
+          <a href="/cart"><img src={panier} alt="Cart" /></a>
           <span className="tooltiptext">Cart</span>
         </div>
         <div className="tooltip">
-          <a href="/login"><img src={account} alt="Account" /></a>
+          <a href="/account"><img src={account} alt="Account" /></a>
           <span className="tooltiptext">Account</span>
         </div>
       </div>

@@ -30,8 +30,6 @@ const AboutUs = () => {
             <ul>
               <li><strong>Qualité:</strong>Nous nous engageons à proposer des produits répondant à des normes de qualité strictes.</li>
               <li><strong>Satisfaction client:</strong> Nos clients sont au cœur de tout ce que nous faisons. Nous nous efforçons de dépasser leurs attentes dans chaque interaction.</li>
-              <li><strong>Innovation:</strong>Nous cherchons constamment à innover et à garder une longueur d'avance sur les tendances de l'industrie pour offrir les produits les plus récents et les plus performants.</li>
-              <li><strong>Intégrité:</strong> Nous menons nos activités avec honnêteté et transparence, en instaurant la confiance avec nos clients et partenaires.</li>
             </ul>
           </div>
           <div className="section history">

@@ -42,16 +42,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2rem;
-    padding: 0 2rem; /* Padding for better readability */
+    padding: 0 2rem;
   }
   
   .section {
     padding: 1rem;
   }
   
-  .section h3 {
+  .about-content h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .section p, .section ul {

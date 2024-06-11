@@ -76,11 +76,23 @@ a {
     right: 50%;
 }
 
-.latest-products-carousel {
+.latest-products-carousel-wrapper {
+    position: relative;
+    overflow: hidden; 
+}
+
+.best-sales-carousel-wrapper {
+    position: relative;
+    overflow: hidden; 
+}
+
+.latest-products-carousel, .best-sales-carousel {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 300px;
+    overflow-x: auto;
+    scroll-behavior: smooth; 
 }
 .latest-products-heading, .best-sales-heading  {
     padding: 0px 70px;
@@ -93,7 +105,7 @@ a {
 .latest-products h3 {
     color: #252525;
 }
-.latest-prodcuts hr {
+#latest-products-devider {
     width: 150px;
     height: 5px;
     margin-left: 70px;
@@ -127,12 +139,6 @@ a {
     color: #252525;
 }
 
-.best-sales-carousel {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 300px;
-}
 
 .best-sales hr {
     width: 150px;
@@ -171,3 +177,43 @@ a {
     height: 60px;
 }
 
+
+.right-next-button {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; 
+    border-radius: 50px;
+    z-index: 1; 
+    background-color: white; 
+    border: none; 
+    cursor: pointer; 
+}
+
+.right-next-button img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.left-next-button {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px; 
+    border-radius: 50px;
+    z-index: 1; 
+    background-color: white;
+    border: none; 
+    cursor: pointer; 
+}
+
+.left-next-button img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
