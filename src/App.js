@@ -24,6 +24,7 @@ import FavoriteProvider from "./Contexts/FavoriteProvider";
 import CatigoryProvider from "./Contexts/CatigoryProvider";
 import ProductProvider from "./Contexts/ProductProvider";
 import OrderProvider from "./Contexts/OrderProvider";
+import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 
 const App = () => {
   const [isLoginFormVisible, setLoginFormVisible] = useState(false);
@@ -49,7 +50,7 @@ const App = () => {
           {!hideNavAndFooter && <Navbar />}
           <Cart />
           <Routes>
-           
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginForm onClose={hideForms} />} />
             <Route

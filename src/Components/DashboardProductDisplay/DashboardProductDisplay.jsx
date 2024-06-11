@@ -34,7 +34,7 @@ function DashboardProductDisplay() {
           <>
             <div className="products-section-heading">
                 <button type='button' onClick={(e)=>{
-                  catigorys.length !== 0 && handleAddNewClick(e);
+                  catigorys && catigorys.length !== 0 && handleAddNewClick(e);
                 }}> + Add New</button>
                 <p>Products Section</p>
             </div>

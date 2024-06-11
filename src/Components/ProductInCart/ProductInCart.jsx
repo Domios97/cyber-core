@@ -17,7 +17,7 @@ function ProductInCart(props) {
   var  [quantity, setQuantity] = useState(props.itemInfo.cart_item.contete);
 
   const handleIncrement = () => {
-    setQuantity(quantity ++);
+    quantity < product.contete && setQuantity(quantity ++);
   };
 
   const handleDecrement = () => {

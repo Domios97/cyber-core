@@ -14,7 +14,7 @@ function Cart() {
         {cartItems && cartItems.data.map((item, index)=>{
           return <ProductInCart key={item.product.id} index ={index} itemInfo = {item} />
         })}
-        <CheckoutButton />
+        <CheckoutButton onClick = {()=>{setDisplayCart(false)}}/>
       </div>
     </div>
   );

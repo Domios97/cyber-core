@@ -6,7 +6,6 @@ class OrderController {
         const userToken =  Auth.isLogedIn();
         const userInfo =  await Auth.me();
 
-        const user = JSON.parse(userInfo);
         let preparedData = OrderController.prparingItemInfo(cartItems);
 
         const url = ApiRequestGenerator.generateUrl("order/placeOrder");
@@ -20,20 +19,17 @@ class OrderController {
             body: JSON.stringify({
                 "token": userToken,
                 "cart_cached_items": JSON.stringify(preparedData),
-                "user_id": user.data.id.toString(),
+                "user_id": userInfo.data.id,
                 "name": customer.name,
-                "last_name": customer.last_name,
-                "phon_number": customer.phon_number,
-                "address_city": customer.full_address,
-                "amount": customer.amount.toString(),
+                "last_name": customer.lastName,
+                "phon_number": customer.phonNumber,
+                "address_city": customer.addressCity,
+                "amount": customer.amount,
             }),
         });
 
         const responseBody = await response.json();
-        if (responseBody.status_code === 202) {
-            return true;
-        }
-        return false;
+        return responseBody;
     }
 
     static prparingItemInfo(items) {
