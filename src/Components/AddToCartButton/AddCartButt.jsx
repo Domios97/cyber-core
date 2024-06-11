@@ -16,7 +16,7 @@ const AddCartButt = ({ addCartHomePage, addCartStyle, product }) => {
       <button
         type="button"
         className={`add-to-cart ${addCartHomePage} ${addCartStyle}`}
-        onClick={handleAddToCart}
+        
       >
         Add To Cart <img src={panier} alt="" />
       </button>
