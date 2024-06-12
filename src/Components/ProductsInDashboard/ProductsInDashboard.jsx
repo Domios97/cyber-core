@@ -28,7 +28,6 @@ function ProductsInDashboard({ onModifyClick, product , productIndex}) {
             setDisplay(false);
             e.preventDefault();
             const response = await ProductController.delete(product.id);
-            console.log(response);
             
           }}>
             <FaRegTrashAlt className='delete-icon' />

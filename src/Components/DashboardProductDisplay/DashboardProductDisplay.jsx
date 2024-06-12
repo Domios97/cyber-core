@@ -29,7 +29,9 @@ function DashboardProductDisplay() {
         {showForm ? (
           <AddProductForm  onCreate={()=>{setShowForm(false)}} />
         ) : showModifyForm ? (
-          <ModifyProductForm product={selectedProduct} onUpdate = {()=>{setShowModifyForm(false)}} />
+          <ModifyProductForm product={selectedProduct} onUpdate = {()=>{
+            setShowModifyForm(false)
+          }} />
         ) : (
           <>
             <div className="products-section-heading">

@@ -6,12 +6,10 @@ import ProductInOrder from '../ProductInOrder/ProductInOrder';
 function Order({order}) {
 
   const getDateFromTimestemp = (createdAt)=>{
-    var year = parseInt(createdAt.substring(0, 4));
-    var month = parseInt(createdAt.substring(5, 7)) - 1; 
-    var day = parseInt(createdAt.substring(8, 10));
-    
-    
-    return `${year}/${month}/${day}`;
+    const date = new Date(createdAt);
+    const fullTime = date.getHours()+":"+date.getMinutes()+":"+date.getDate();
+    const fullYer= date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+    return fullYer+"  , "+fullTime;
   }
   return (
     <div>

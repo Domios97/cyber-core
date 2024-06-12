@@ -7,9 +7,10 @@ import OrderController from '../../controllers/OrderController';
 
 function AccountOrdersDisplay() {
   const {userOrders, setUserOrders} = useContext(UserOrdersContext);
-  const removeOrder = async (id) => {
+  const removeOrder = async (id, index) => {
     const cancelResponse = await OrderController.cancelOrder(id);
-    console.log(cancelResponse);
+    const newUserOrders = [...userOrders.slice(0, index), ...userOrders.slice(index + 1)];
+    setUserOrders(newUserOrders);
   };
 
   return (
@@ -21,11 +22,12 @@ function AccountOrdersDisplay() {
       {userOrders.length === 0 ? (
         <p id='you-haveno-orders'>You have no orders yet.</p>
       ) : (
-        userOrders && userOrders.map(order => (
+        userOrders && userOrders.map((order, index) => (
           <AccountOrder
             key={order.id}
             order={order}
             removeOrder={removeOrder}
+            index = {index}
           />
         ))
       )}

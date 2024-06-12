@@ -10,12 +10,10 @@ function OrderInDashboard({order, index}) {
     const [orderDisplay, setOrderDisplay] = useState(true);
 
     const getDateFromTimestemp = (createdAt)=>{
-        var year = parseInt(createdAt.substring(0, 4));
-        var month = parseInt(createdAt.substring(5, 7)) - 1; 
-        var day = parseInt(createdAt.substring(8, 10));
-        
-        
-        return `${year}/${month}/${day}`;
+      const date = new Date(createdAt);
+      const fullTime = date.getHours()+":"+date.getMinutes()+":"+date.getDate();
+      const fullYer= date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+      return fullYer+"  , "+fullTime;
     }
   return (
     <div>
@@ -31,7 +29,8 @@ function OrderInDashboard({order, index}) {
                   var response = await OrderController.reject(order.user_id, order.id);
                   if( response.status_code === 202 ){
                     setOrderDisplay(false)
-                    allOrders.splice(index, 1);
+                    const newOrders = [...allOrders.slice(0, index), ...allOrders.slice(index + 1)];
+                    setAllOrders(newOrders);
                   }
                 }}>Reject</button>
                 {orderAccepted === 0 ? 

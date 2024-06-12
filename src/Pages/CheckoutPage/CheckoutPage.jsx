@@ -113,7 +113,7 @@ function CheckoutPage() {
                     const response = await OrderController.placeOrder(cartItems.data, customer);
                     cartItems.data = [];
                     setCartItems(cartItems);
-                    console.log(response);
+                    navigate("/MyAccount");
                   }
                 }}>Order Now</button>
                 </form>

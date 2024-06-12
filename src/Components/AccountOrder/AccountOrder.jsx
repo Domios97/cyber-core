@@ -4,15 +4,13 @@ import ProductInOrder from '../../Components/ProductInOrder/ProductInOrder';
 import Auth from '../../controllers/Auth';
 import { BiSolidCheckCircle } from 'react-icons/bi';
 
-function AccountOrder({ order, removeOrder }) {
+function AccountOrder({ order, removeOrder, index }) {
  
   const getDateFromTimestemp = (createdAt)=>{
-    var year = parseInt(createdAt.substring(0, 4));
-    var month = parseInt(createdAt.substring(5, 7)) - 1; 
-    var day = parseInt(createdAt.substring(8, 10));
-    
-    
-    return `${year}/${month}/${day}`;
+    const date = new Date(createdAt);
+    const fullTime = date.getHours()+":"+date.getMinutes()+":"+date.getDate();
+    const fullYer= date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+    return fullYer+"  , "+fullTime;
   }
  
   return (
@@ -25,10 +23,10 @@ function AccountOrder({ order, removeOrder }) {
           </div>
           <div className="cancel-done">
             {order.accepted === 1 && <div className='cancel-done'>
-              <button id='done-order' onClick={() => removeOrder(order.id)}>Done</button> 
+              <button id='done-order' onClick={() => removeOrder(order.id, index)}>Done</button> 
               <BiSolidCheckCircle className= "checked-order-icon"/>
             </div>}
-            {order.accepted === 0 && <button id='delete-order' onClick={() => removeOrder(order.id)}>Cancel</button>}
+            {order.accepted === 0 && <button id='delete-order' onClick={() => removeOrder(order.id,index)}>Cancel</button>}
           </div>
         </div>
         <hr />
