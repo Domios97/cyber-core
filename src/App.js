@@ -17,8 +17,6 @@ import ResetPasswordForm from "./Pages/ResetPasswordForm/ResetPasswordForm";
 import ProductDetail from "./Pages/ProductDetails/ProductDetail";
 import WishlistPage from "./Pages/WishlistPage/WishlistPage";
 import AdminDashbord from "./Pages/AdminDashbordPage/AdminDashbord";
-import AuthenticateContext from "./Contexts/AuthenticateContext";
-import ProductCart from "./Components/OneProduct/ProductCart";
 import CartProvider from "./Contexts/CartProvider";
 import FavoriteProvider from "./Contexts/FavoriteProvider";
 import CatigoryProvider from "./Contexts/CatigoryProvider";
@@ -28,6 +26,8 @@ import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 import MyAccountPage from "./Pages/MyAccountPage/MyAccountPage";
 import UserOrdersProvider from "./Contexts/UserOrdersProvider";
 import NotificationsProvider from "./Contexts/NotificationsProvider";
+import RequireAuth from "./Contexts/RequireAuth";
+import RequireAdmin from "./Contexts/RequireAdmin";
 
 
 const App = () => {
@@ -55,13 +55,20 @@ const App = () => {
           <Cart />
           <Routes>
             <Route path="/MyAccount" element={
-              <UserOrdersProvider>
-                <NotificationsProvider>
-                  <MyAccountPage />
-                </NotificationsProvider>
-              </UserOrdersProvider>} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/" element={<HomePage />} />
+              <RequireAuth>
+                <UserOrdersProvider>
+                  <NotificationsProvider>
+                    <MyAccountPage />
+                  </NotificationsProvider>
+                </UserOrdersProvider>
+              </RequireAuth>
+             } />
+            <Route path="/checkout" element={<RequireAuth>
+              <CheckoutPage />
+            </RequireAuth>} />
+            <Route path="/" element={<RequireAuth>
+              <HomePage />
+            </RequireAuth>} />
             <Route path="/login" element={<LoginForm onClose={hideForms} />} />
             <Route
               path="/signup"
@@ -69,20 +76,32 @@ const App = () => {
             />
             <Route
               path="/reset-password"
-              element={<ResetPasswordForm onClose={hideForms} />}
+              element={<RequireAuth>
+                <ResetPasswordForm onClose={hideForms} />
+              </RequireAuth>}
             />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/wishlist" element={<WishlistPage />} />
+            <Route path="/cart" element={<RequireAuth>
+              <Cart />
+            </RequireAuth>} />
+            <Route path="/wishlist" element={<RequireAuth>
+              <WishlistPage />
+            </RequireAuth>} />
             <Route
               path="/product-detail/:productId"
-              element={<ProductDetail />}
+              element={<RequireAuth>
+                <ProductDetail />
+              </RequireAuth>}
             />
               <Route path="/admin/dashboard" 
               element={
                 <OrderProvider>
                   <ProductProvider>
                     <CatigoryProvider>
-                      <AdminDashbord />
+                      <RequireAuth>
+                        <RequireAdmin>
+                          <AdminDashbord />
+                        </RequireAdmin>
+                      </RequireAuth>
                     </CatigoryProvider>
                 </ProductProvider>
                 </OrderProvider>
