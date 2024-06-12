@@ -9,8 +9,11 @@ import "./AdminDashbord.css";
 import DashboardProductDisplay from '../../Components/DashboardProductDisplay/DashboardProductDisplay';
 import DashboardCategoryDisplay from '../../Components/DashboardCategoryDisplay/DashboardCategoryDisplay';
 import DashboardOrdersDisplay from '../../Components/DashboardOrdersDisplay/DashboardOrdersDisplay';
+import { useNavigate } from "react-router-dom";
+import AuthController from "../../controllers/AuthController";
 
 function AdminDashboard() {
+  const navigate = useNavigate();
   const [activeComponent, setActiveComponent] = useState('product');
 
   const handleManageProductsClick = () => {
@@ -48,7 +51,12 @@ function AdminDashboard() {
             <span>Manage Orders</span>
             <MdOutlineKeyboardArrowRight className="dashboard-right-arrows" />
           </div>
-          <div className="admin-logout">
+          <div className="admin-logout" onClick={async (e)=>{
+            e.preventDefault(); 
+            navigate("/login");
+            const response= await AuthController.logOut();
+            
+          }}>
             <MdOutlineLogout className="admin-logout-icon" />
             <span>Logout</span>
           </div>

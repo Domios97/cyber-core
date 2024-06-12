@@ -7,7 +7,7 @@ const ResetPasswordForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
-
+  
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };

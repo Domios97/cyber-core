@@ -11,12 +11,15 @@ import AccountNotificationDisplay from '../../Components/AccountNotificationDisp
 import { UserOrdersContext } from '../../Contexts/UserOrdersProvider';
 import Auth from '../../controllers/Auth';
 import { NotificationsContext } from '../../Contexts/NotificationsProvider';
+import AuthController from '../../controllers/AuthController';
+import { useNavigate } from 'react-router-dom';
 
 function MyAccountPage() {
   const [user, setUser]= useState(null);
   const [activeSection, setActiveSection] = useState('orders');
   const {notifications, setNotifications} = useContext(NotificationsContext);
   const {userOrders, setUserOrders} = useContext(UserOrdersContext);
+  const navigate = useNavigate();
   useEffect(()=>{
     const fetchData = async ()=>{
      const userInfo = await Auth.me();
@@ -44,7 +47,12 @@ function MyAccountPage() {
               <p>Reset Password</p>
             </a>
           </div>
-          <div className="fonctionnalities">
+          <div className="fonctionnalities" onClick={async (e)=>{
+            e.preventDefault(); 
+            navigate("/login");
+            const response= await AuthController.logOut();
+            
+          }}>
             <TbLogout2 id='account-left-icons'/>
             <p>Log Out</p>
           </div>
