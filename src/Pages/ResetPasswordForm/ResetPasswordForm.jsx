@@ -14,6 +14,11 @@ const ResetPasswordForm = () => {
   const [confPassword, setConfPassword] = useState(null); 
   const [oldPassword, setOldPassword] = useState(null);
   const [confirmClicked, setConfirmClicked]= useState(false);
+
+  const [error, setError] = useState({
+    displayError: false, 
+    message: "",
+  });
   const haveEmptyInput = (object)=>{
     return Object.values(object).some(value => {
       if (typeof value === 'string' && value.trim() === '') {
@@ -79,14 +84,14 @@ const ResetPasswordForm = () => {
              e.preventDefault(); 
              setConfPassword(e.target.value);
           }}
-          style={{border: confirmClicked && confPassword === null && confPassword !== newPassword && "1px red solid"}}
+          style={{border: confirmClicked && confPassword === null && "1px red solid"}}
           />
           <FaLock className="icon" />
           <button type="button" onClick={toggleConfirmPasswordVisibility} className="visibility_toggle">
             {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
           </button>
         </div>
-        <p>Your Password Must Contain At least 6 Characters</p>
+       {error.displayError &&  <p className='input_error_message'>{error.message}</p>}
         <button className="button"  onClick={async (e)=>{
             e.preventDefault(); 
             setConfirmClicked(true);
@@ -95,10 +100,12 @@ const ResetPasswordForm = () => {
               newPassword: newPassword, 
               confPassword: confPassword,
             }
+            confPassword !== newPassword && setError({displayError:true, message: "check your password and try again"});
+            haveEmptyInput(userInfo) && setError({displayError:true, message: "all field must be implementd"})
             if(!haveEmptyInput(userInfo) && confPassword === newPassword){
                 const response = await  ResetPasswordController.changePassword(oldPassword, newPassword);
                 response.status_code === 202 && navigate("/MyAccount");
-                response.status_code === 403 && alert("check your password and try again !!");
+                response.status_code === 403 && setError({displayError:true, message: "password encorrect pleas try again"});
                 console.log(response);
             }
         }}>Confirm</button>

@@ -28,6 +28,7 @@ import UserOrdersProvider from "./Contexts/UserOrdersProvider";
 import NotificationsProvider from "./Contexts/NotificationsProvider";
 import RequireAuth from "./Contexts/RequireAuth";
 import RequireAdmin from "./Contexts/RequireAdmin";
+import ShopPage from "./Pages/ShopPage/ShopPage";
 
 
 const App = () => {
@@ -68,6 +69,13 @@ const App = () => {
             </RequireAuth>} />
             <Route path="/" element={<RequireAuth>
               <HomePage />
+            </RequireAuth>} />
+            <Route path="/Shop" element={<RequireAuth>
+              <ProductProvider>
+                <CatigoryProvider>
+                  <ShopPage />
+                </CatigoryProvider>
+              </ProductProvider>
             </RequireAuth>} />
             <Route path="/login" element={<LoginForm onClose={hideForms} />} />
             <Route

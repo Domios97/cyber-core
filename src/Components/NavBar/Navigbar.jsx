@@ -23,8 +23,10 @@ const Navbar = () => {
         </div>
         </a>
         <div className="home-shop tooltip">
-          <img src={shop} alt="Shop" />
-          <span className="tooltiptext">Shop</span>
+          <a href="/Shop">
+            <img src={shop} alt="Shop" />
+            <span className="tooltiptext">Shop</span>
+          </a>
         </div>
       </div>
       <div className="search-bar">
