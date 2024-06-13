@@ -29,6 +29,7 @@ import NotificationsProvider from "./Contexts/NotificationsProvider";
 import RequireAuth from "./Contexts/RequireAuth";
 import RequireAdmin from "./Contexts/RequireAdmin";
 import ShopPage from "./Pages/ShopPage/ShopPage";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 
 const App = () => {
@@ -66,6 +67,9 @@ const App = () => {
              } />
             <Route path="/checkout" element={<RequireAuth>
               <CheckoutPage />
+            </RequireAuth>} />
+            <Route path="/AboutUs" element={<RequireAuth>
+              <AboutUs />
             </RequireAuth>} />
             <Route path="/" element={<RequireAuth>
               <HomePage />

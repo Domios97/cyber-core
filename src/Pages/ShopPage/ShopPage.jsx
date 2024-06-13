@@ -25,9 +25,11 @@ function ShopPage() {
   const query = useQuery();
   const searchQuery = query.get('search') || '';
 
+
  useEffect(() => {
      filterProducts();
   }, [filters, selectedCatigory]);
+
 
   const filterProducts = () => {
   let filtered = allProducts ? [...allProducts] : []; // Make a copy of allProducts

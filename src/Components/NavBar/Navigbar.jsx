@@ -3,12 +3,14 @@ import './navigbar.css';
 import { shop, favori, loupe, panier, account, sitelogo, home } from "../../images";
 import { CartContext } from "../../Contexts/CartProvider";
 import { FavoriteContext } from "../../Contexts/FavoriteProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
   const {displayCart , setDisplayCart, cartItems , setCartItems} = useContext(CartContext);
   const {displayFavorite, setDisplayFavorite, favoriteItems, setFavoriteItems} = useContext(FavoriteContext);
-
+ const location = useLocation();
+ const navigate = useNavigate();
   return (
     <nav>
       <div className="site-logo">
@@ -31,7 +33,11 @@ const Navbar = () => {
       </div>
       <div className="search-bar">
         <form action="" method="">
-          <input type="search" className="search-input" placeholder="Laptops, Desktops, Accessories ...Etc " />
+          <input type="search" className="search-input" placeholder="Laptops, Desktops, Accessories ...Etc "  onFocus={()=>{
+             if(location.pathname !== "/Shop"){
+               navigate("/Shop");
+             }
+          }}/>
           <button type="submit" className="search-button">
             <img src={loupe} alt="Search" />
           </button>
@@ -39,8 +45,8 @@ const Navbar = () => {
       </div>
       <div className="about-contact">
         <ul>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="/AboutUs">About Us</a></li>
+          <li><a href="mailTo:Cybercore@gmail.com">Contact</a></li>
         </ul>
       </div>
       <div className="right-nav">
